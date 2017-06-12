@@ -1,0 +1,125 @@
+<!--  -->
+<!doctype html>
+<html>
+	<head>
+		<title>10条好的PHP编程习惯——就要听我说 91lsme.com</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="就要听我说,听我说,91lsme,listen me">
+		<meta name="description" content="就要听我说个人网站，分感知、觉醒、践行、随笔4大主题，内容充实丰富，思想充满创意，作品精益求精。">
+		<link rel="shortcut icon" type="image/ico" href="http://www.91lsme.com/app/web/templates/public/image/favicon.ico">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/public/css/css.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/article/css/article.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/plugin/editor/plugins/code/prettify.css" type="text/css">
+		<script type="text/javascript" src="http://www.91lsme.com/plugin/jquery/jquery-1.6.4.min.js"></script>
+	</head>
+
+	<body>
+		<div class="main"> 
+			<!-- 顶部 -->
+			<div class="top"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="logo"><a href="http://www.91lsme.com"><img src="http://www.91lsme.com/app/web/templates/public/image/logo.png"></a></div>
+<div class="Qme"><a href="tencent://message/?uin=286142784&Menu=yes"><img src="http://www.91lsme.com/app/web/templates/public/image/Qme.png"></a></div>
+ </div>
+			<!-- 导航 -->
+			<div class="nav"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul class="navMain">
+	<li><a href="http://www.91lsme.com/"><img src="http://www.91lsme.com/app/web/templates/public/image/nav1.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/1_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav2.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/2_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav3.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/3_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav4.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/4_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav5.png"/></a></li>
+	<li><a href="http://www.91lsme.com/article/14.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav6.png"/></a></li>
+</ul>
+ </div>
+			<div class="content"> 
+				<!-- 左边框 -->
+				<div class="left"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="leftImg"><img src="http://www.91lsme.com/app/web/templates/public/image/leftImg.png"></div>
+<div class="leftWord">
+	<div class="titleL"><img src="http://www.91lsme.com/app/web/templates/public/image/listen.png"></div>
+	<div class="wordL">
+		<div class="tM"><span>⊙</span> 前言阵地 </div>
+		<div class="cM" style="text-indent:2em"> 经过很长时间奋战，就要听我说个人网终于建成，还有很多不成熟和欠缺的地方 ，希望大家多多支持和提出好的建议！以后会做的更好 ……</div>
+	</div>   
+	<script type="text/javascript" src="/plugin/highcharts/highcharts.js"></script>  
+	<script type="text/javascript" src="/plugin/highcharts/highcharts-more.js"></script>
+	<script type="text/javascript" src="/plugin/highcharts/themes/grid.js"></script>
+	<script type="text/javascript" src="/app/web/templates/public/js/clock.js"></script>
+	<div class="lefttime" id="container_clock"></div>
+	<div class="leftad"></div>
+</div>
+ </div>
+				<div class="centerAndRight"> 
+					<!-- 空白框 -->
+					<div class="ad">  </div>
+					<div class="center">
+						<div class="title">
+							<div class="titleImg">
+								<img src="http://www.91lsme.com/app/web/templates/default/image/life.png"/>
+							</div>
+						</div>  
+						<div class="articleTitle">10条好的PHP编程习惯</div>
+						<div class="time">2014-12-22</div>
+						<div class="line_1"></div>
+						<div class="articleMain"><strong>1、使用单引号括起来的字符串</strong><br />
+当使用双引号来括字符串时，PHP解释器会对其进行变量替换、转义等操作，如“\\n”。如果你只想输出一个基本的字符串，就用单引号吧，这样会节省一些资源。当然，如果你需要进行变量替换的，那就必须用双引号了，但其他情况下还是用单引号吧。<br />
+<strong>2、字符串的输出</strong><br />
+你认为以下哪一条语句的运行速度最快？<br />
+print \"Hi my name is $a. I am $b\";<br />
+echo \"Hi my name is $a. I am $b\";<br />
+echo \"Hi my name is \".$a.\". I am \".$b;<br />
+echo \"Hi my name is \",$a,\". I am \",$b;<br />
+echo \'Hi my name is \',$a,\'. I am \',$b;<br />
+也许这看起来很奇怪，但事实上最后一条的运行速度是最快的。print比echo要慢，在字符串中进行变量替换时会慢，而连接字符串要比用逗号连接来得慢，最后一句则是第一个习惯的体现。所以，不在字符串中进行变量替换不仅会加快程序运行速度，也会让你的代码在任何语法高亮显示的编辑器中显得更为易懂（变量会被高亮显示出来）。很少人知道echo的参数可以用逗号连接，且速度会比字符串连接要来得快。最后再用上第一个习惯，那这条语句就非常好了。<br />
+<strong>3、在数组索引中使用单引号</strong><br />
+正如你在上面的测试题中所看到的，我指出了$x[sales]从严格意义上来说是错误的，索引应该被括起来，即$x[\'sales\']。这是因为PHP会将没有括起来的索引辨认为“裸”字符串，并把它解释为一个常量。当找不到该常量的定义时，才将其解释为一个字符串，所以这条语句才是可运行的。把索引括起来可以省去这部分工作，如果将来正好要用这一字符串定义常量时也就不会有错误了。我甚至听说这样做要快七倍左右的时间，虽然我没有亲自测试过。更多关于这一话题的讨论，请看PHP手册“数组”一章中的的“数组的能与不能”一节。<br />
+<strong>4、不要使用开始标志的缩写形式</strong><br />
+你正在使用这样的符号吗？“&lt;?”是非常糟糕的符号，它会引起与XML解释器的冲突。而且一旦你发布了这些代码，那么使用者就必须修改php.ini文件来打开对此符号的支持。所以实在没有理由去使用这种形式。用“&lt;?php“吧。<br />
+<strong>5、尽量不要使用正则表达式</strong><br />
+在进行常规的字符串操作时，尽可能不要去使用正则表达式（preg和ereg系列函数）。str_replace函数要比preg_replace快得多，甚至strtr函数也要比str_replace来得快。省去这些不必要的麻烦吧，你的老板会感谢你的。<br />
+<strong>6、不要在循环声明中使用函数</strong><br />
+这个问题不单单出现在PHP中，你可以在其他语言的代码中经常看到：<br />
+差：for($i=0;$i&lt;count($array);$i++){...}<br />
+好：$count=count($array);for($i=0;$i&lt;$count;$i++){...}<br />
+这因该很好解释，但许多人就是想少写一行代码而浪费了系统资源。如果在循环声明中使用了count函数，那每次循环都会调用一次。如果你的循环次数很多，那就会浪费非常多的时间。<br />
+<strong>7、永远不要使用register_globals和magic quotes</strong><br />
+这是两个很古老的功能，在当时（十年前）也许是一个好方法，但现在看来并非如此。老版本的PHP在安装时会默认打开这两个功能，这会引起安全漏洞、编程错误及其他的问题，如只有用户输入了数据时才会创建变量等。如今这两个功能都被舍弃了，所以每个程序员都应该避免使用。如果你过去的程序有使用这两项功能，那就尽快将其剔除吧。<br />
+<strong>8、一定要对变量进行初始化（这里的“初始化”指的是“声明”——译者注）</strong><br />
+当需要没有初始化的变量，PHP解释器会自动创建一个变量，但依靠这个特性来编程并不是一个好主意。这会造成程序的粗糙，或者使代码变得另人迷惑，因为你需要探寻这个变量是从哪里开始被创建的。另外，对一个没有初始化的变量进行递增操作要比初始化过的来得慢。所以对变量进行初始化会是个不错的主意。<br />
+<strong>9、对代码进行注释</strong><br />
+这个问题已经提过很多次了，但再多次也不够。我知道有些地方是不聘用不对代码进行注释的程序员的。我在前一次工作面试后和副总、面试官一起浏览我写的代码，当他们对我所做的代码注释印象深刻，还了解了一下我的这一习惯。一天之后，我得到了这个工作。<br />
+我知道有些自称为PHP大师的人声称自己的代码写得很好，不需要添加什么注释。在我看来，这些人都是垃圾。学一写注释的规范和技巧，熟悉一下phpDocumentor或Doxygen之类的注释辅助软件，都是值得的。<br />
+<strong>10、遵循一个编程规范</strong><br />
+关于这一点，是你需要在面试中询问你潜在的老板的，问问他们正在使用什么编程规范。PEAR？Zend？内部规范？要提及你正在使用的编程规范，不管是你自己创建的，还是目前普遍流行的一种。对于PHP这种松松垮垮的语言来说，如果没有一个好的编程规范，那么那些代码就会看起来想一堆垃圾。发臭的，令人作呕的垃圾。一些基本的规范包括空格规范、打括号匹配、命名风格等。这对任何一个追求高质量的代码的人来说都是必须的。<br />
+有人说：“我讨厌你的4个空格的缩进。”我要说，什么？用4个空格来缩进？这比用制表符过占用3个字符的空间。更重要的是，只要是使用比记事本高级的编辑器，你可以自定义制表符的缩进值。所以每个程序员都可以以其最习惯的方式来看代码。可以时设置为4，也可以设置为0（如果你是个受虐狂）。反正我不在乎，但你就是不能用空格来缩进！<br /></div> 
+						<div class="articlelink">相关链接：<a href="http://hi.baidu.com/tylergong/item/5f1060d0f1cb98342b35c748" target="_blank">http://hi.baidu.com/tylergong/item/5f1060d0f1cb98342b35c748</a></div> 
+						<div class="articlefooter">亲们~！有事就点“<a href="tencent://message/?uin=286142784&Menu=yes">就Q我</a>"，多支持和提出好的建议！以后会做的更好 ……</div>
+						<div class="articleother">
+							<div>上一篇：<a href="http://www.91lsme.com/article/33.shtml">两個有用的 php header 讯息</a></div>
+							<div>下一篇：<a href="http://www.91lsme.com/article/31.shtml">魔方强悍公式</a></div>
+						</div>
+					</div>
+					<div class="cbottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ </div>
+				</div>
+			</div>
+			<!-- 低部 -->
+			<div class="bottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul>
+	<li><a href="http://www.91lsme.com">版权信息</a></li>
+	<li><a href="http://www.91lsme.com">建站说明</a></li>
+	<li><a href="http://www.91lsme.com">设为首页</a></li>
+	<li><a href="http://www.91lsme.com">加入收藏</a></li>
+</ul> 
+<br/><br/>
+<div class="bw">Copyright © 2014-2015 tylergong <a href="http://www.91lsme.com" target="_blank">www.91lsme.com</a> All rights reserved. <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备 14059724号</a></div> 
+<div style="display: none;">
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4e12425c4f2ca16acaab6b2a8cdc8fbc' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</div>
+ </div>
+		</div>
+	</body>
+</html>

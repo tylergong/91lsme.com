@@ -1,0 +1,171 @@
+<!-- {config_load file="smarty.conf"} -->
+<!doctype html>
+<html>
+	<head>
+		<title>{#web_title#}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="{#web_keywords#}">
+		<meta name="description" content="{#web_description#}">
+		<meta name="baidu-site-verification" content="sBgDPEYv7n" />
+		<link rel="shortcut icon" type="image/ico" href="{#cdn_url#}/app/web/templates/public/image/favicon.ico">
+		<link rel="stylesheet" href="{#cdn_url#}/app/web/templates/public/css/css.css" type="text/css">
+		<link rel="stylesheet" href="{#cdn_url#}/app/web/templates/default/css/index.css" type="text/css">
+		<script type="text/javascript" src="{#cdn_url#}/plugin/jquery/jquery-1.6.4.min.js"></script>
+	</head>
+
+	<body>
+		<div class="main"> 
+			<!-- 顶部 -->
+			<div class="top"> {include file="app/web/templates/public/html/header.shtml"} </div>
+			<!-- 导航 -->
+			<div class="nav"> {include file="app/web/templates/public/html/nav.shtml"} </div>
+			<div class="content"> 
+				<!-- 左边框 -->
+				<div class="left"> {include file="app/web/templates/public/html/left.shtml"} </div>
+				<div class="centerAndRight"> 
+					<!-- 广告框 -->
+					<div class="ad"> {include file="app/web/templates/public/html/ad.shtml"} </div>
+					<div class="center">
+						<div class="list">
+							<div class="news">
+								<div class="title">
+									<div class="titleImg"><img src="{#cdn_url#}/app/web/templates/default/image/news.png"/></div>
+									<div class="more"><a href="{#web_url#}/articlelist{if $is_static}/1_1.shtml{else}?type=1{/if}"><img src="{#cdn_url#}/app/web/templates/default/image/more.png" /></a></div>
+								</div>
+								<div class="line_1"></div>
+								<div class="listMain">
+									<ul><!-- 感知 -->
+										<li class="listup">
+											<span><img src="{#cdn_url#}/app/web/templates/public/image/c.png" /></span>
+											<a  class="hx"></a>
+										</li>
+										<! -- {section name=gz loop=$list_gz} -->
+										<li class="{if $list_gz[gz].up eq 1}listup{/if}">
+											<span>◎</span>
+											{if $list_gz[gz].up eq 1}<img src="{#cdn_url#}/app/web/templates/public/image/pin_3.gif" />{/if}
+											<! -- {if $is_static} -->
+											<a href="{if $list_gz[gz].is_link eq 1}{$list_gz[gz].jumpurl}{else}{#web_url#}/article/{$list_gz[gz].id}.shtml{/if}" target="{if $list_gz[gz].is_link eq 1}_blank{/if}"> {$list_gz[gz].title} </a>
+											<! -- {else} -->
+											<a href="{if $list_gz[gz].is_link eq 1}{$list_gz[gz].jumpurl}{else}{#web_url#}/article?id={$list_gz[gz].id}{/if}" target="{if $list_gz[gz].is_link eq 1}_blank{/if}"> {$list_gz[gz].title} </a>
+											<! -- {/if} -->
+											<span class="ctime"> {$list_gz[gz].create_time|date_format:'%m-%d'} </span>
+										</li>
+										<! -- {/section} -->
+									</ul>
+								</div>
+							</div>
+							<div class="study">
+								<div class="title">
+									<div class="titleImg"><img src="{#cdn_url#}/app/web/templates/default/image/study.png"/></div>
+									<div class="more"><a href="{#web_url#}/articlelist{if $is_static}/2_1.shtml{else}?type=2{/if}"><img src="{#cdn_url#}/app/web/templates/default/image/more.png" /></a></div>
+								</div>
+								<div class="line_1"></div>
+								<div class="listMain">
+									<ul><!-- 觉悟 -->
+										<! -- {section name=jw loop=$list_jw} -->
+										<li class="{if $list_jw[jw].up eq 1}listup{/if}">
+											<span>◎</span>
+											{if $list_jw[jw].up eq 1}<img src="{#cdn_url#}/app/web/templates/public/image/pin_3.gif" />{/if}
+											<! -- {if $is_static} -->
+											<a href="{if $list_jw[jw].is_link eq 1}{$list_jw[jw].jumpurl}{else}{#web_url#}/article/{$list_jw[jw].id}.shtml{/if}" target="{if $list_jw[jw].is_link eq 1}_blank{/if}"> {$list_jw[jw].title} </a>
+											<! -- {else} -->
+											<a href="{if $list_jw[jw].is_link eq 1}{$list_jw[jw].jumpurl}{else}{#web_url#}/article?id={$list_jw[jw].id}{/if}" target="{if $list_jw[jw].is_link eq 1}_blank{/if}"> {$list_jw[jw].title} </a>
+											<! -- {/if} -->
+											<span class="ctime"> {$list_jw[jw].create_time|date_format:'%m-%d'} </span>
+										</li>
+										<! -- {/section} -->
+									</ul>
+								</div>
+							</div>
+							<div class="speaks">
+								<div class="title">
+									<div class="titleImg"><img src="{#cdn_url#}/app/web/templates/default/image/speaks.png"/></div>
+									<div class="more"><a href="{#web_url#}/articlelist{if $is_static}/3_1.shtml{else}?type=3{/if}"><img src="{#cdn_url#}/app/web/templates/default/image/more.png" /></a></div>
+								</div>
+								<div class="line_1"></div>
+								<div class="listMain">
+									<ul><!-- 践行 -->
+										<! -- {section name=jx loop=$list_jx} -->
+										<li class="{if $list_jx[jx].up eq 1}listup{/if}">
+											<span>◎</span>
+											{if $list_jx[jx].up eq 1}<img src="{#cdn_url#}/app/web/templates/public/image/pin_3.gif" />{/if}
+											<! -- {if $is_static} -->
+											<a href="{if $list_jx[jx].is_link eq 1}{$list_jx[jx].jumpurl}{else}{#web_url#}/article/{$list_jx[jx].id}.shtml{/if}" target="{if $list_jx[jx].is_link eq 1}_blank{/if}"> {$list_jx[jx].title} </a>
+											<! -- {else} -->
+											<a href="{if $list_jx[jx].is_link eq 1}{$list_jx[jx].jumpurl}{else}{#web_url#}/article?type={$list_jx[jx].id}{/if}" target="{if $list_jx[jx].is_link eq 1}_blank{/if}"> {$list_jx[jx].title} </a>
+											<! -- {/if} -->
+											<span class="ctime"> {$list_jx[jx].create_time|date_format:'%m-%d'} </span>
+										</li>
+										<! -- {/section} -->
+									</ul>
+								</div>
+							</div>
+							<div class="suibi">
+								<div class="title">
+									<div class="titleImg"><img src="{#cdn_url#}/app/web/templates/default/image/life.png"/></div>
+									<div class="more"><a href="{#web_url#}/articlelist{if $is_static}/4_1.shtml{else}?type=4{/if}"><img src="{#cdn_url#}/app/web/templates/default/image/more.png" /></a></div>
+								</div>
+								<div class="line_1"></div>
+								<div class="listMain">
+									<ul><!-- 随笔 -->
+										<! -- {section name=sb loop=$list_sb} -->
+										<li class="{if $list_sb[sb].up eq 1}listup{/if}">
+											<span>◎</span> 
+											{if $list_sb[sb].up eq 1}<img src="{#cdn_url#}/app/web/templates/public/image/pin_3.gif" />{/if}
+											<! -- {if $is_static} -->
+											<a href="{if $list_sb[sb].is_link eq 1}{$list_sb[sb].jumpurl}{else}{#web_url#}/article/{$list_sb[sb].id}.shtml{/if}" target="{if $list_sb[sb].is_link eq 1}_blank{/if}"> {$list_sb[sb].title} </a>
+											<! -- {else} -->
+											<a href="{if $list_sb[sb].is_link eq 1}{$list_sb[sb].jumpurl}{else}{#web_url#}/article?id={$list_sb[sb].id}{/if}" target="{if $list_sb[sb].is_link eq 1}_blank{/if}"> {$list_sb[sb].title} </a>
+											<! -- {/if} -->
+											<span class="ctime"> {$list_sb[sb].create_time|date_format:'%m-%d'} </span>
+										</li>
+										<! -- {/section} -->
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="right">
+							<div class="line"></div>
+							<div class="rightWord">
+								<div class="rW">
+									<div class="connect"> Email：286142784@qq.com<br/>
+										QQ&nbsp;&nbsp;&nbsp;：286142784 </div>
+								</div>
+								<div class="line_2"></div>
+							</div>
+							<div class="rightw">
+								扫码关注【<b>听我说</b>】微信公众账号或直接添加【<b>listenme1986</b>】<br/>
+								--------------------------<br/>
+								想查<b>天气</b>？回复【天气@城市名】既可。天气状况就能跃然眼前哦~~！<br/><br/>
+								想查<b>附近</b>？回复【附近@目标关键词】既可。帮你搜索附近5公里的目标哦~~！<br/><br/>
+								想查<b>快递</b>？回复【快递@快递单号】即可。方便又快捷~~！<br/><br/>
+								想查<b>地铁</b>？直接回复【地铁】~~总能查到方便又可靠的行程路线~~！<br/><br/>
+								【隐藏功能】上传你一张您的头像或者是您和他人的合照头像试试吧~~~~~<br/>
+								--------------------------<br/>
+							</div>
+							<div class="rightImg"><img src="{#cdn_url#}/app/web/templates/public/image/qrcode.jpg" width="200"/> </div>
+						</div>
+						<div class="cbottom"> 
+							<iframe name="kuaidi100" src="http://www.kuaidi100.com/frame/app/index2.html" width="90%" height="300" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+						</div>
+						<div class="cbottom"> {include file="app/web/templates/public/html/bottom_ad.shtml"} </div>
+					</div>
+				</div>
+			</div>
+			<!-- 低部 -->
+			<div class="bottom"> {include file="app/web/templates/public/html/footer_index.shtml"} </div>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				$.ajax({
+					type: "GET",
+					url: "/default-xh", 
+					dataType: "json",
+					success: function(data) {
+						$('.hx').html(data);
+					},
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- {config_load file="smarty.conf"} -->
+<!doctype html>
+<html>
+	<head>
+		<title>{#admin_title#}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" type="image/ico" href="/app/web/templates/public/image/favicon.ico">
+		<link rel="stylesheet" href="/app/web/templates/admin/css/admin.css" type="text/css">
+		<script type="text/javascript" src="/plugin/jquery/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="/plugin/jquery/jquery.form.js"></script>
+		<script type="text/javascript" src="/app/web/templates/admin/js/admin.js"></script>
+	</head>
+
+	<body>
+		<div class="all">
+			<!-- 顶部 -->
+			<div class="top"> {include file="app/web/templates/admin/html/header.shtml"} </div>
+			<!-- 内容 -->
+			<div class="content">
+				<!-- 左边菜单 -->
+				<div class="left"> {include file="app/web/templates/admin/html/menu.shtml"} </div>
+				<!-- 主要内容-->
+				<div class="main"></div>
+			</div>
+			<div class="footer"> {include file="app/web/templates/admin/html/footer.shtml"} </div>
+		</div>
+		<script type="text/javascript">
+			menu.tourl('/admin-status');
+		</script>
+	</body>
+</html>

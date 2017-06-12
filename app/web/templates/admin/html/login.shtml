@@ -1,0 +1,26 @@
+<!-- {config_load file="smarty.conf"} -->
+<!doctype html>
+<html>
+	<head>
+		<title>{#web_title#}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" type="image/ico" href="/app/web/templates/public/image/favicon.ico">
+		<link rel="stylesheet" href="/app/web/templates/admin/css/login.css" type="text/css">
+		<script type="text/javascript" src="/plugin/jquery/jquery-1.6.4.min.js"></script>
+	</head>
+
+	<body>
+		<div class="loginBox">
+			<div class="content">  
+				<label>用户：</label><input type="text" id="username" name="username" /><br />
+				<label>密码：</label><input type="password" id="password" name="password" /><br />
+				<div class="btn">
+					<input type="image" src="/app/web/templates/admin/image/loginBtn.png" id="loginBtn" />
+					<div class="btnBottom"><img src="/app/web/templates/admin/image/loginBtnBottom.png" /></div>
+				</div>
+				<div class="warn"></div> 
+				<script type="text/javascript" src="/app/web/templates/admin/js/login.js"></script>
+			</div>
+		</div>
+	</body>
+</html>

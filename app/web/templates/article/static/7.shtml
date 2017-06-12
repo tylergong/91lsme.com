@@ -1,0 +1,121 @@
+<!--  -->
+<!doctype html>
+<html>
+	<head>
+		<title>Mac OS X Lion常用快捷键——就要听我说 91lsme.com</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="就要听我说,听我说,91lsme,listen me">
+		<meta name="description" content="就要听我说个人网站，分感知、觉醒、践行、随笔4大主题，内容充实丰富，思想充满创意，作品精益求精。">
+		<link rel="shortcut icon" type="image/ico" href="http://www.91lsme.com/app/web/templates/public/image/favicon.ico">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/public/css/css.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/article/css/article.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/plugin/editor/plugins/code/prettify.css" type="text/css">
+		<script type="text/javascript" src="http://www.91lsme.com/plugin/jquery/jquery-1.6.4.min.js"></script>
+	</head>
+
+	<body>
+		<div class="main"> 
+			<!-- 顶部 -->
+			<div class="top"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="logo"><a href="http://www.91lsme.com"><img src="http://www.91lsme.com/app/web/templates/public/image/logo.png"></a></div>
+<div class="Qme"><a href="tencent://message/?uin=286142784&Menu=yes"><img src="http://www.91lsme.com/app/web/templates/public/image/Qme.png"></a></div>
+ </div>
+			<!-- 导航 -->
+			<div class="nav"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul class="navMain">
+	<li><a href="http://www.91lsme.com/"><img src="http://www.91lsme.com/app/web/templates/public/image/nav1.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/1_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav2.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/2_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav3.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/3_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav4.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/4_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav5.png"/></a></li>
+	<li><a href="http://www.91lsme.com/article/14.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav6.png"/></a></li>
+</ul>
+ </div>
+			<div class="content"> 
+				<!-- 左边框 -->
+				<div class="left"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="leftImg"><img src="http://www.91lsme.com/app/web/templates/public/image/leftImg.png"></div>
+<div class="leftWord">
+	<div class="titleL"><img src="http://www.91lsme.com/app/web/templates/public/image/listen.png"></div>
+	<div class="wordL">
+		<div class="tM"><span>⊙</span> 前言阵地 </div>
+		<div class="cM" style="text-indent:2em"> 经过很长时间奋战，就要听我说个人网终于建成，还有很多不成熟和欠缺的地方 ，希望大家多多支持和提出好的建议！以后会做的更好 ……</div>
+	</div>   
+	<script type="text/javascript" src="/plugin/highcharts/highcharts.js"></script>  
+	<script type="text/javascript" src="/plugin/highcharts/highcharts-more.js"></script>
+	<script type="text/javascript" src="/plugin/highcharts/themes/grid.js"></script>
+	<script type="text/javascript" src="/app/web/templates/public/js/clock.js"></script>
+	<div class="lefttime" id="container_clock"></div>
+	<div class="leftad"></div>
+</div>
+ </div>
+				<div class="centerAndRight"> 
+					<!-- 空白框 -->
+					<div class="ad">  </div>
+					<div class="center">
+						<div class="title">
+							<div class="titleImg">
+								<img src="http://www.91lsme.com/app/web/templates/default/image/study.png"/>
+							</div>
+						</div>  
+						<div class="articleTitle">Mac OS X Lion常用快捷键</div>
+						<div class="time">2014-12-15</div>
+						<div class="line_1"></div>
+						<div class="articleMain"><br />
+1.自带的拼音按下capslock可以快速切换中英文<br />
+2.cmd option v=剪切<br />
+3.cmd M=最小化<br />
+4.cmd W=关闭（窗口／标签）<br />
+5.cmd Q=退出（程序）<br />
+6.cmd i＝显示文件/文件夹属性<br />
+7.cmd backspace＝移到废纸篓<br />
+8.cmd shift 3＝整个屏幕截图<br />
+9.cmd shift 4＝选择区域截图<br />
+10.cmd shift 4 space＝为某个应用程序的窗口截图<br />
+11.control Space＝用Spotlight进行桌面搜索<br />
+12.改变窗口大小时配合使用option／shift可实现“对称缩放／按比例缩放”的效果<br />
+13.在missioncontrol中，按住option单击上方space缩略图来切换不同桌面的预览<br />
+14.在finder的GO（前往）菜单按住option，可显示Library（资源库）<br />
+15.cmd＋T＝新建浏览器标签<br />
+16.cmd＋R＝刷新<br />
+17.全屏应用按esc退出<br />
+18.Finder中，空格可以快速预览文件<br />
+19.cmd＋Tab=快速切换应用程序<br />
+20.control Tab=在浏览器中切换标签<br />
+21.missoncontrol中，空格可以放大鼠标悬停下的程序缩略图<br />
+22.cmd＋N＝新建浏览器窗口／运行第二个QQ／其他应用程序中的“新建”功能<br />
+23.option＋cmd＋T＝特殊字符<br />
+24.cmd B可以改变Launchpad背景<br />
+25.shift 6=自带拼音的表情符号<br />
+26.在Safari中按cmd＋Z，可以恢复最后关闭的标签。<br /></div> 
+						<div class="articlelink">相关链接：<a href="http://hi.baidu.com/tylergong/item/4e9319606a2afc106895e62a" target="_blank">http://hi.baidu.com/tylergong/item/4e9319606a2afc106895e62a</a></div> 
+						<div class="articlefooter">亲们~！有事就点“<a href="tencent://message/?uin=286142784&Menu=yes">就Q我</a>"，多支持和提出好的建议！以后会做的更好 ……</div>
+						<div class="articleother">
+							<div>上一篇：<a href="http://www.91lsme.com/article/8.shtml">php 4行代码完成最小微博</a></div>
+							<div>下一篇：<a href="http://www.91lsme.com/article/6.shtml">批量修改用户名重复问题</a></div>
+						</div>
+					</div>
+					<div class="cbottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ </div>
+				</div>
+			</div>
+			<!-- 低部 -->
+			<div class="bottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul>
+	<li><a href="http://www.91lsme.com">版权信息</a></li>
+	<li><a href="http://www.91lsme.com">建站说明</a></li>
+	<li><a href="http://www.91lsme.com">设为首页</a></li>
+	<li><a href="http://www.91lsme.com">加入收藏</a></li>
+</ul> 
+<br/><br/>
+<div class="bw">Copyright © 2014-2015 tylergong <a href="http://www.91lsme.com" target="_blank">www.91lsme.com</a> All rights reserved. <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备 14059724号</a></div> 
+<div style="display: none;">
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4e12425c4f2ca16acaab6b2a8cdc8fbc' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</div>
+ </div>
+		</div>
+	</body>
+</html>

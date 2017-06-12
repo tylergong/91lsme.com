@@ -1,0 +1,52 @@
+<!-- {config_load file="smarty.conf"} -->
+<!doctype html>
+<html>
+	<head>
+		<title>{$data.title}——{#web_title#}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="{#web_keywords#}">
+		<meta name="description" content="{#web_description#}">
+		<link rel="shortcut icon" type="image/ico" href="{#cdn_url#}/app/web/templates/public/image/favicon.ico">
+		<link rel="stylesheet" href="{#cdn_url#}/app/web/templates/public/css/css.css" type="text/css">
+		<link rel="stylesheet" href="{#cdn_url#}/app/web/templates/article/css/article.css" type="text/css">
+		<link rel="stylesheet" href="{#cdn_url#}/plugin/editor/plugins/code/prettify.css" type="text/css">
+		<script type="text/javascript" src="{#cdn_url#}/plugin/jquery/jquery-1.6.4.min.js"></script>
+	</head>
+
+	<body>
+		<div class="main"> 
+			<!-- 顶部 -->
+			<div class="top"> {include file="app/web/templates/public/html/header.shtml"} </div>
+			<!-- 导航 -->
+			<div class="nav"> {include file="app/web/templates/public/html/nav.shtml"} </div>
+			<div class="content"> 
+				<!-- 左边框 -->
+				<div class="left"> {include file="app/web/templates/public/html/left.shtml"} </div>
+				<div class="centerAndRight"> 
+					<!-- 空白框 -->
+					<div class="ad">  </div>
+					<div class="center">
+						<div class="title">
+							<div class="titleImg">
+								<img src="{#cdn_url#}/app/web/templates/default/image/{if $data.cid eq 1}news.png{else if $data.cid eq 2}study.png{else if $data.cid eq 3}speaks.png{else}life.png{/if}"/>
+							</div>
+						</div>  
+						<div class="articleTitle">{$data.title}</div>
+						<div class="time">{$data.create_time|date_format:'%Y-%m-%d'}</div>
+						<div class="line_1"></div>
+						<div class="articleMain">{$data.content}</div> 
+						<div class="articlelink">相关链接：<a href="{$data.rel_link}" target="_blank">{$data.rel_link}</a></div> 
+						<div class="articlefooter">亲们~！有事就点“<a href="tencent://message/?uin=286142784&Menu=yes">就Q我</a>"，多支持和提出好的建议！以后会做的更好 ……</div>
+						<div class="articleother">
+							<div>上一篇：{if $updown.up}<a href="{#web_url#}/article{if $is_static}/{$updown.up.id}.shtml{else}?id={$updown.up.id}{/if}">{$updown.up.title}</a>{else}没有了{/if}</div>
+							<div>下一篇：{if $updown.down}<a href="{#web_url#}/article{if $is_static}/{$updown.down.id}.shtml{else}?id={$updown.down.id}{/if}">{$updown.down.title}</a>{else}没有了{/if}</div>
+						</div>
+					</div>
+					<div class="cbottom"> {include file="app/web/templates/public/html/bottom_ad.shtml"} </div>
+				</div>
+			</div>
+			<!-- 低部 -->
+			<div class="bottom"> {include file="app/web/templates/public/html/footer.shtml"} </div>
+		</div>
+	</body>
+</html>

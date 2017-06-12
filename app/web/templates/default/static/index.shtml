@@ -1,0 +1,515 @@
+<!--  -->
+<!doctype html>
+<html>
+	<head>
+		<title>就要听我说 91lsme.com</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="就要听我说,听我说,91lsme,listen me">
+		<meta name="description" content="就要听我说个人网站，分感知、觉醒、践行、随笔4大主题，内容充实丰富，思想充满创意，作品精益求精。">
+		<meta name="baidu-site-verification" content="sBgDPEYv7n" />
+		<link rel="shortcut icon" type="image/ico" href="http://www.91lsme.com/app/web/templates/public/image/favicon.ico">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/public/css/css.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/default/css/index.css" type="text/css">
+		<script type="text/javascript" src="http://www.91lsme.com/plugin/jquery/jquery-1.6.4.min.js"></script>
+	</head>
+
+	<body>
+		<div class="main"> 
+			<!-- 顶部 -->
+			<div class="top"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="logo"><a href="http://www.91lsme.com"><img src="http://www.91lsme.com/app/web/templates/public/image/logo.png"></a></div>
+<div class="Qme"><a href="tencent://message/?uin=286142784&Menu=yes"><img src="http://www.91lsme.com/app/web/templates/public/image/Qme.png"></a></div>
+ </div>
+			<!-- 导航 -->
+			<div class="nav"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul class="navMain">
+	<li><a href="http://www.91lsme.com/"><img src="http://www.91lsme.com/app/web/templates/public/image/nav1.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/1_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav2.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/2_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav3.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/3_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav4.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/4_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav5.png"/></a></li>
+	<li><a href="http://www.91lsme.com/article/14.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav6.png"/></a></li>
+</ul>
+ </div>
+			<div class="content"> 
+				<!-- 左边框 -->
+				<div class="left"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="leftImg"><img src="http://www.91lsme.com/app/web/templates/public/image/leftImg.png"></div>
+<div class="leftWord">
+	<div class="titleL"><img src="http://www.91lsme.com/app/web/templates/public/image/listen.png"></div>
+	<div class="wordL">
+		<div class="tM"><span>⊙</span> 前言阵地 </div>
+		<div class="cM" style="text-indent:2em"> 经过很长时间奋战，就要听我说个人网终于建成，还有很多不成熟和欠缺的地方 ，希望大家多多支持和提出好的建议！以后会做的更好 ……</div>
+	</div>   
+	<script type="text/javascript" src="/plugin/highcharts/highcharts.js"></script>  
+	<script type="text/javascript" src="/plugin/highcharts/highcharts-more.js"></script>
+	<script type="text/javascript" src="/plugin/highcharts/themes/grid.js"></script>
+	<script type="text/javascript" src="/app/web/templates/public/js/clock.js"></script>
+	<div class="lefttime" id="container_clock"></div>
+	<div class="leftad"></div>
+</div>
+ </div>
+				<div class="centerAndRight"> 
+					<!-- 广告框 -->
+					<div class="ad"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div id="focus">
+	<ul>
+		<!--  -->
+		<li>
+			<!--  -->
+			<img src="http://www.91lsme.com/attached/ad/20141222/20141222153720_33119.png" width="760" height="80"/>
+			<!--  -->
+		</li>
+		<!--  -->
+		<li>
+			<!--  -->
+			<a href="http://www.91lsme.com/article/3.shtml" target="_blank" title="全国地铁换乘线路查询"><img src="http://www.91lsme.com/attached/ad/20141222/20141222153643_21393.png"/></a>
+			<!--  -->
+		</li>
+		<!--  -->
+		<li>
+			<!--  -->
+			<a href="http://www.91lsme.com/article/1.shtml" target="_blank" title="北京地铁涨价“新票价”计算方法"><img src="http://www.91lsme.com/attached/ad/20141222/20141222153612_89448.png"/></a>
+			<!--  -->
+		</li>
+		<!--  -->
+		<li>
+			<!--  -->
+			<a href="http://www.91lsme.com/article/2.shtml" target="_blank" title="2015春节购票攻略"><img src="http://www.91lsme.com/attached/ad/20141222/20141222153539_60296.png"/></a>
+			<!--  -->
+		</li>
+		<!--  -->
+		<li>
+			<!--  -->
+			<a href="http://www.91lsme.com/article/9.shtml" target="_blank" title="2015年放假安排公布"><img src="http://www.91lsme.com/attached/ad/20141222/20141222153430_72842.png"/></a>
+			<!--  -->
+		</li>
+		<!--  -->
+	</ul>
+</div>
+<script type="text/javascript" src="http://www.91lsme.com/app/web/templates/public/js/ad.js"></script> 
+ </div>
+					<div class="center">
+						<div class="list">
+							<div class="news">
+								<div class="title">
+									<div class="titleImg"><img src="http://www.91lsme.com/app/web/templates/default/image/news.png"/></div>
+									<div class="more"><a href="http://www.91lsme.com/articlelist/1_1.shtml"><img src="http://www.91lsme.com/app/web/templates/default/image/more.png" /></a></div>
+								</div>
+								<div class="line_1"></div>
+								<div class="listMain">
+									<ul><!-- 感知 -->
+										<li class="listup">
+											<span><img src="http://www.91lsme.com/app/web/templates/public/image/c.png" /></span>
+											<a  class="hx"></a>
+										</li>
+										<! --  -->
+										<li class="listup">
+											<span>◎</span>
+											<img src="http://www.91lsme.com/app/web/templates/public/image/pin_3.gif" />											<! --  -->
+											<a href="http://www.91lsme.com/article/77.shtml" target=""> 国务院办公厅关于2016年 部分节假日安排的通知 </a>
+											<! --  -->
+											<span class="ctime"> 12-18 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/75.shtml" target=""> 8月22至23号北京周末大阅兵预演，相关禁行通告 </a>
+											<! --  -->
+											<span class="ctime"> 08-21 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/74.shtml" target=""> 北京8月20日-9月3日将实行单双号限行 </a>
+											<! --  -->
+											<span class="ctime"> 08-11 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://sports.sina.com.cn/others/winter/2015-07-31/doc-ifxfpcyp5178085.shtml" target="_blank"> 赢了！北京获2022年冬奥会举办权 </a>
+											<! --  -->
+											<span class="ctime"> 08-03 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/71.shtml" target=""> 中国27所大学上榜2015全球高校500强 </a>
+											<! --  -->
+											<span class="ctime"> 02-25 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/70.shtml" target=""> 2015年时间多1秒 将加在北京时间7月1日 </a>
+											<! --  -->
+											<span class="ctime"> 02-25 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/69.shtml" target=""> 2015年中央电视台春节联欢晚会主持人阵容发布 </a>
+											<! --  -->
+											<span class="ctime"> 02-02 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/68.shtml" target=""> 2015亚洲杯三连胜 国足名利双收 </a>
+											<! --  -->
+											<span class="ctime"> 01-20 </span>
+										</li>
+										<! --  -->
+									</ul>
+								</div>
+							</div>
+							<div class="study">
+								<div class="title">
+									<div class="titleImg"><img src="http://www.91lsme.com/app/web/templates/default/image/study.png"/></div>
+									<div class="more"><a href="http://www.91lsme.com/articlelist/2_1.shtml"><img src="http://www.91lsme.com/app/web/templates/default/image/more.png" /></a></div>
+								</div>
+								<div class="line_1"></div>
+								<div class="listMain">
+									<ul><!-- 觉悟 -->
+										<! --  -->
+										<li class="listup">
+											<span>◎</span>
+											<img src="http://www.91lsme.com/app/web/templates/public/image/pin_3.gif" />											<! --  -->
+											<a href="http://www.91lsme.com/article/36.shtml" target=""> jquery 超赞的一个 描点平滑定位 </a>
+											<! --  -->
+											<span class="ctime"> 12-24 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/59.shtml" target=""> MySQL数据库中与 NULL值有关的几个问题 </a>
+											<! --  -->
+											<span class="ctime"> 01-04 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/58.shtml" target=""> PHP :time(),date(),mktime()区别 </a>
+											<! --  -->
+											<span class="ctime"> 01-04 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/53.shtml" target=""> php 删除文件夹里所有静态页 </a>
+											<! --  -->
+											<span class="ctime"> 12-30 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/52.shtml" target=""> Mysql数据数据[字节、长度、数据范围]一览表 </a>
+											<! --  -->
+											<span class="ctime"> 12-30 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/28.shtml" target=""> 查询表中是否有重复项 </a>
+											<! --  -->
+											<span class="ctime"> 12-22 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/27.shtml" target=""> php 中处理 json </a>
+											<! --  -->
+											<span class="ctime"> 12-22 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/26.shtml" target=""> 系统级别图片压缩（支持php） </a>
+											<! --  -->
+											<span class="ctime"> 12-22 </span>
+										</li>
+										<! --  -->
+									</ul>
+								</div>
+							</div>
+							<div class="speaks">
+								<div class="title">
+									<div class="titleImg"><img src="http://www.91lsme.com/app/web/templates/default/image/speaks.png"/></div>
+									<div class="more"><a href="http://www.91lsme.com/articlelist/3_1.shtml"><img src="http://www.91lsme.com/app/web/templates/default/image/more.png" /></a></div>
+								</div>
+								<div class="line_1"></div>
+								<div class="listMain">
+									<ul><!-- 践行 -->
+										<! --  -->
+										<li class="listup">
+											<span>◎</span>
+											<img src="http://www.91lsme.com/app/web/templates/public/image/pin_3.gif" />											<! --  -->
+											<a href="http://www.91lsme.com/article/63.shtml" target=""> phpExcel 各种使用大全 </a>
+											<! --  -->
+											<span class="ctime"> 01-09 </span>
+										</li>
+										<! --  -->
+										<li class="listup">
+											<span>◎</span>
+											<img src="http://www.91lsme.com/app/web/templates/public/image/pin_3.gif" />											<! --  -->
+											<a href="http://www.91lsme.com/article/3.shtml" target=""> 全国地铁换乘线路查询（北、上、广、深、津） </a>
+											<! --  -->
+											<span class="ctime"> 12-15 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/76.shtml" target=""> SVN的“local edit, incoming delete upon update” </a>
+											<! --  -->
+											<span class="ctime"> 09-14 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/72.shtml" target=""> 使用mobiscroll时，如何可以设置有年月日时分的日期 </a>
+											<! --  -->
+											<span class="ctime"> 06-13 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/61.shtml" target=""> PHP计算字符串长度 </a>
+											<! --  -->
+											<span class="ctime"> 01-05 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/60.shtml" target=""> 程序中经常会用到的正则表达式 </a>
+											<! --  -->
+											<span class="ctime"> 01-04 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/54.shtml" target=""> windows apache httpd.conf 配置虚拟主机方法 </a>
+											<! --  -->
+											<span class="ctime"> 12-30 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span>
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/37.shtml" target=""> php post 提交后 刷新页面重复提交 解决方案 </a>
+											<! --  -->
+											<span class="ctime"> 12-24 </span>
+										</li>
+										<! --  -->
+									</ul>
+								</div>
+							</div>
+							<div class="suibi">
+								<div class="title">
+									<div class="titleImg"><img src="http://www.91lsme.com/app/web/templates/default/image/life.png"/></div>
+									<div class="more"><a href="http://www.91lsme.com/articlelist/4_1.shtml"><img src="http://www.91lsme.com/app/web/templates/default/image/more.png" /></a></div>
+								</div>
+								<div class="line_1"></div>
+								<div class="listMain">
+									<ul><!-- 随笔 -->
+										<! --  -->
+										<li class="listup">
+											<span>◎</span> 
+											<img src="http://www.91lsme.com/app/web/templates/public/image/pin_3.gif" />											<! --  -->
+											<a href="http://www.91lsme.com/article/39.shtml" target=""> 火车随笔 </a>
+											<! --  -->
+											<span class="ctime"> 12-26 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span> 
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/48.shtml" target=""> 中国十大名剑之一——辕夏禹剑 </a>
+											<! --  -->
+											<span class="ctime"> 12-26 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span> 
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/47.shtml" target=""> 中国十大名剑之二——湛泸 </a>
+											<! --  -->
+											<span class="ctime"> 12-26 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span> 
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/46.shtml" target=""> 中国十大名剑之三——赤霄 </a>
+											<! --  -->
+											<span class="ctime"> 12-26 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span> 
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/45.shtml" target=""> 中国十大名剑之四——泰阿 </a>
+											<! --  -->
+											<span class="ctime"> 12-26 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span> 
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/44.shtml" target=""> 中国十大名剑之五——七星龙渊 </a>
+											<! --  -->
+											<span class="ctime"> 12-26 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span> 
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/43.shtml" target=""> 中国十大名剑之六七——干将莫邪 </a>
+											<! --  -->
+											<span class="ctime"> 12-26 </span>
+										</li>
+										<! --  -->
+										<li class="">
+											<span>◎</span> 
+																						<! --  -->
+											<a href="http://www.91lsme.com/article/42.shtml" target=""> 中国十大名剑之八——鱼肠 </a>
+											<! --  -->
+											<span class="ctime"> 12-26 </span>
+										</li>
+										<! --  -->
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="right">
+							<div class="line"></div>
+							<div class="rightWord">
+								<div class="rW">
+									<div class="connect"> Email：286142784@qq.com<br/>
+										QQ&nbsp;&nbsp;&nbsp;：286142784 </div>
+								</div>
+								<div class="line_2"></div>
+							</div>
+							<div class="rightw">
+								扫码关注【<b>听我说</b>】微信公众账号或直接添加【<b>listenme1986</b>】<br/>
+								--------------------------<br/>
+								想查<b>天气</b>？回复【天气@城市名】既可。天气状况就能跃然眼前哦~~！<br/><br/>
+								想查<b>附近</b>？回复【附近@目标关键词】既可。帮你搜索附近5公里的目标哦~~！<br/><br/>
+								想查<b>快递</b>？回复【快递@快递单号】即可。方便又快捷~~！<br/><br/>
+								想查<b>地铁</b>？直接回复【地铁】~~总能查到方便又可靠的行程路线~~！<br/><br/>
+								【隐藏功能】上传你一张您的头像或者是您和他人的合照头像试试吧~~~~~<br/>
+								--------------------------<br/>
+							</div>
+							<div class="rightImg"><img src="http://www.91lsme.com/app/web/templates/public/image/qrcode.jpg" width="200"/> </div>
+						</div>
+						<div class="cbottom"> 
+							<iframe name="kuaidi100" src="http://www.kuaidi100.com/frame/app/index2.html" width="90%" height="300" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+						</div>
+						<div class="cbottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ </div>
+					</div>
+				</div>
+			</div>
+			<!-- 低部 -->
+			<div class="bottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul>
+	<li><a href="http://www.91lsme.com">版权信息</a></li>
+	<li><a href="http://www.91lsme.com">建站说明</a></li>
+	<li><a href="http://www.91lsme.com">设为首页</a></li>
+	<li><a href="http://www.91lsme.com">加入收藏</a></li>
+</ul> 
+<br/>
+<div class="flink">友情链接：
+	<!--  -->
+	<!--  -->
+	<span><a href="http://www.iloveoops.com" target="_blank">偶扑</a></span>
+	<!--  -->
+	<!--  -->
+	<!--  -->
+	<span><a href="http://www.ctrip.com/" target="_blank">携程网</a></span>
+	<!--  -->
+	<!--  -->
+	<!--  -->
+	<span><a href="http://www.byguitar.com/" target="_blank">彼岸吉他网</a></span>
+	<!--  -->
+	<!--  -->
+	<!--  -->
+	<span><a href="http://www.duomi.com/" target="_blank">多米音乐</a></span>
+	<!--  -->
+	<!--  -->
+	<!--  -->
+	<span><a href="http://www.quwan.com/" target="_blank">趣玩</a></span>
+	<!--  -->
+	<!--  -->
+	<!--  -->
+	<span><a href="http://www.baidu.com/" target="_blank">百度</a></span>
+	<!--  -->
+	<!--  -->
+	<!--  -->
+	<span><a href="http://www.360.cn/" target="_blank">360导航</a></span>
+	<!--  -->
+	<!--  -->
+	<!--  -->
+	<span><a href="http://se.360.cn/" target="_blank">360安全浏览器</a></span>
+	<!--  -->
+	<!--  -->
+	<!--  -->
+	<span><a href="http://www.iqiyi.com/" target="_blank">爱奇艺</a></span>
+	<!--  -->
+	<!--  -->
+	<!--  -->
+	<span><a href="http://m.kuaidi100.com" target="_blank">快递查询</a></span>
+	<!--  -->
+	<!--  -->
+	<!--  -->
+	<span><a href="http://www.dl96.com" target="_blank">栋梁小站</a></span>
+	<!--  -->
+	<!--  -->
+	<!--  -->
+	<span><a href="http://www.citrondesign.cn/" target="_blank">香橼设计</a></span>
+	<!--  -->
+	<!--  --> 
+</div>
+<br/>
+<div class="bw">Copyright © 2014-2015 tylergong <a href="http://www.91lsme.com" target="_blank">www.91lsme.com</a> All rights reserved. <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备 14059724号</a></div> 
+<div style="display: none;">
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4e12425c4f2ca16acaab6b2a8cdc8fbc' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</div>
+ </div>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				$.ajax({
+					type: "GET",
+					url: "/default-xh", 
+					dataType: "json",
+					success: function(data) {
+						$('.hx').html(data);
+					},
+				});
+			});
+		</script>
+	</body>
+</html>

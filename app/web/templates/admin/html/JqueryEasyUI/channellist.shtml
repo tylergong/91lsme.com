@@ -1,0 +1,101 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="/plugin/jquery-easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="/app/web/templates/admin/css/easyui.css">
+<link rel="stylesheet" type="text/css" href="/plugin/jquery-easyui/themes/icon.css"> 
+<script type="text/javascript" src="/plugin/jquery-easyui/jquery.easyui.min.js"></script>  
+<!-- 详细内容 -->
+<div class="detail"> 
+	<div style="margin:5px 0 0 2px;"></div>
+	<table id="cdg" class="easyui-datagrid" title="文章管理" style="width:710px;height:400px" data-options="singleSelect:false,rownumbers:true,singleSelect:true,pagination:true,url:'/admin-JqueryEasyUI-getchannellist',method:'get',toolbar:'#ctb'">
+		<thead>
+			<tr>
+				<th data-options="field:'ck',checkbox:true"></th>
+				<th data-options="field:'id',width:40,align:'center'" sortable="true">ID</th>
+				<th data-options="field:'cname',width:300">频道名称</th> 
+				<th data-options="field:'is_show',width:80,align:'center'" sortable="true">是否显示</th>  
+			</tr>
+		</thead>
+	</table>
+	<div style="margin:5px 0 0 2px;"></div> 
+	<div id="ctb" style="padding:2px 5px;"> 
+		<a href="javascript:void(0)" class="easyui-linkbutton" id="doAdd_c" iconCls="icon-add">Add</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" id="doEdit_c" iconCls="icon-edit">Edit</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" id="doDelete_c" iconCls="icon-remove">Delete</a> 
+	</div>
+	<div id="cdlg" class="easyui-dialog" style="width: 500px; height: 280px; padding: 10px 20px;" closed="true" buttons="#cdlg-buttons">
+		<div class="ftitle"> 
+			信息编辑 
+		</div> 
+		<form id="cfm" method="post"> 
+			<div class="fitem"> 
+				<label> 
+					频道名称
+				</label> 
+				<input name="cname" class="easyui-validatebox" required="true" style="width: 320px;" /> 
+			</div>
+			<div class="fitem"> 
+				<label> 
+					显示
+				</label> 
+				<input name="is_show" class="easyui-validatebox" required="true"  /> 
+			</div> 
+			<input type="hidden" name="id" id="id" /> 
+		</form>
+	</div>
+	<div id="cdlg-buttons"> 
+		<a href="javascript:void(0)" class="easyui-linkbutton" id="doSave_c" iconcls="icon-save">保存</a> 
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:$('#cdlg').dialog('close')" iconcls="icon-cancel">取消</a> 
+	</div> 
+	<script type="text/javascript">
+	$('#doAdd_c').click(function() {
+		$("#cdlg").dialog("open").dialog('setTitle', '新增频道');
+		$("#cfm").form("clear");
+		url = '/admin-JqueryEasyUI-savechannel';
+	});
+	$('#doEdit_c').click(function() {
+		var row = $('#cdg').datagrid('getSelected');
+		if (row) {
+			$("#cdlg").dialog("open").dialog('setTitle', '修改频道');
+			$("#cfm").form("load", row);
+			url = '/admin-JqueryEasyUI-savechannel';
+		}
+	});
+	$('#doSave_c').click(function() {
+		$("#cfm").form("submit", {
+			url: url,
+			onsubmit: function() {
+				return $(this).form("validate");
+			},
+			success: function(result) {
+				if (result) {
+					$.messager.alert("提示信息", "操作成功");
+					$("#cdlg").dialog("close");
+					$("#cdg").datagrid("load");
+				}
+				else {
+					$.messager.alert("提示信息", "操作失败");
+				}
+			}
+		});
+	});
+	$('#doDelete_c').click(function() {
+		var row = $('#cdg').datagrid('getSelected');
+		if (row) {
+			$.messager.confirm('Confirm', '你确认要删除您选中的这条记录么?', function(r) {
+				if (r) {
+					$.post('/admin-JqueryEasyUI-delchannel', { ids: row.id }, function(result) {
+						if (result.success) {
+							$('#cdg').datagrid('reload');
+						} else {
+							$.messager.show({
+								title: 'Error',
+								msg: result.errorMsg
+							});
+						}
+					}, 'json');
+				}
+			});
+		}
+	});
+	</script>
+</div>

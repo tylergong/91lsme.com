@@ -1,0 +1,59 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 标题 -->
+<div class="title">
+	<div class="icon manager"></div><div class="word">账号管理</div>
+	<div class="add icon" id="add" onclick="menu.tourl('/admin-account?type=add');"></div>
+</div> 
+<!-- 详细内容 -->
+<div class="detail">
+	<table border="1" class="table1">
+		<tr> 
+			<th>ID</th>
+			<th>管理员账号</th>
+			<th>是否有效</th> 
+			<th>添加时间</th> 
+			<th>操作</th>
+		</tr>
+		<!-- {if $list} -->
+		<!-- {section name=l loop=$list} -->
+		<!-- {if $smarty.section.l.index % 2 eq 0} -->
+		<tr class="odd"><!-- {else} --><tr class="even"><!-- {/if} --> 
+			<td>{$list[l].id}</td> 
+			<td>{$list[l].uname}</td> 
+			<td>{if $list[l].is_show eq 0}<span style="color:red">否</span>{else}是{/if}</td>  
+			<td>{$list[l].create_time}</td>
+			<td><div class="pic"><a onclick="menu.tourl('/admin-account?id={$list[l].id}&type=edit')"></a></div></td>
+		</tr>
+		<!-- {/section} -->
+		<!-- {else} -->
+		<tr class="odd"><td colspan=8>暂无数据</td></tr>
+		<!-- {/if} -->
+	</table> 
+	<div class="operating">
+		<!-- 分页 -->
+		<div class="pagination"> 
+			<div class="pagiR">{$pageview}   
+				转到<input type="text" name="page" id="page" value="{$cpage}" />页
+				<input type="button" value="GO" id="go" />
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 对话框 -->
+<div id="alertbg"></div>
+<div id="alert">
+	<div class="icon" id="close"></div>
+	<div class="select">[<a href="#" id="confirm">确认</a><a href="#" id="cancle">取消</a>]</div>
+</div>
+<script type="text/javascript">
+	// 翻页跳转
+	$('#go').click(function() {
+		var gv = $('#page').val();
+		var reg1 = /^\d+$/;
+		if (reg1.test(gv)) {
+			menu.tourl('/admin-accountlist?page=' + gv);
+		} else {
+			alert('请输入正确定的页数');
+		}
+	});
+</script>

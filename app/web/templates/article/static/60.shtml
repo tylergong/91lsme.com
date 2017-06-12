@@ -1,0 +1,126 @@
+<!--  -->
+<!doctype html>
+<html>
+	<head>
+		<title>程序中经常会用到的正则表达式——就要听我说 91lsme.com</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="就要听我说,听我说,91lsme,listen me">
+		<meta name="description" content="就要听我说个人网站，分感知、觉醒、践行、随笔4大主题，内容充实丰富，思想充满创意，作品精益求精。">
+		<link rel="shortcut icon" type="image/ico" href="http://www.91lsme.com/app/web/templates/public/image/favicon.ico">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/public/css/css.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/article/css/article.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/plugin/editor/plugins/code/prettify.css" type="text/css">
+		<script type="text/javascript" src="http://www.91lsme.com/plugin/jquery/jquery-1.6.4.min.js"></script>
+	</head>
+
+	<body>
+		<div class="main"> 
+			<!-- 顶部 -->
+			<div class="top"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="logo"><a href="http://www.91lsme.com"><img src="http://www.91lsme.com/app/web/templates/public/image/logo.png"></a></div>
+<div class="Qme"><a href="tencent://message/?uin=286142784&Menu=yes"><img src="http://www.91lsme.com/app/web/templates/public/image/Qme.png"></a></div>
+ </div>
+			<!-- 导航 -->
+			<div class="nav"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul class="navMain">
+	<li><a href="http://www.91lsme.com/"><img src="http://www.91lsme.com/app/web/templates/public/image/nav1.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/1_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav2.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/2_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav3.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/3_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav4.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/4_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav5.png"/></a></li>
+	<li><a href="http://www.91lsme.com/article/14.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav6.png"/></a></li>
+</ul>
+ </div>
+			<div class="content"> 
+				<!-- 左边框 -->
+				<div class="left"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="leftImg"><img src="http://www.91lsme.com/app/web/templates/public/image/leftImg.png"></div>
+<div class="leftWord">
+	<div class="titleL"><img src="http://www.91lsme.com/app/web/templates/public/image/listen.png"></div>
+	<div class="wordL">
+		<div class="tM"><span>⊙</span> 前言阵地 </div>
+		<div class="cM" style="text-indent:2em"> 经过很长时间奋战，就要听我说个人网终于建成，还有很多不成熟和欠缺的地方 ，希望大家多多支持和提出好的建议！以后会做的更好 ……</div>
+	</div>   
+	<script type="text/javascript" src="/plugin/highcharts/highcharts.js"></script>  
+	<script type="text/javascript" src="/plugin/highcharts/highcharts-more.js"></script>
+	<script type="text/javascript" src="/plugin/highcharts/themes/grid.js"></script>
+	<script type="text/javascript" src="/app/web/templates/public/js/clock.js"></script>
+	<div class="lefttime" id="container_clock"></div>
+	<div class="leftad"></div>
+</div>
+ </div>
+				<div class="centerAndRight"> 
+					<!-- 空白框 -->
+					<div class="ad">  </div>
+					<div class="center">
+						<div class="title">
+							<div class="titleImg">
+								<img src="http://www.91lsme.com/app/web/templates/default/image/speaks.png"/>
+							</div>
+						</div>  
+						<div class="articleTitle">程序中经常会用到的正则表达式</div>
+						<div class="time">2015-01-04</div>
+						<div class="line_1"></div>
+						<div class="articleMain">验证数字：^[0-9]*$<br />
+验证n位的数字：^\\d{n}$<br />
+验证至少n位数字：^\\d{n,}$<br />
+验证m-n位的数字：^\\d{m,n}$<br />
+验证零和非零开头的数字：^(0|[1-9][0-9]*)$<br />
+验证有两位小数的正实数：^[0-9]+(.[0-9]{2})?$<br />
+验证有1-3位小数的正实数：^[0-9]+(.[0-9]{1,3})?$<br />
+验证非零的正整数：^\\+?[1-9][0-9]*$<br />
+验证非零的负整数：^\\-[1-9][0-9]*$<br />
+验证非负整数（正整数 + 0） ^\\d+$<br />
+验证非正整数（负整数 + 0） ^((-\\d+)|(0+))$<br />
+验证长度为3的字符：^.{3}$<br />
+验证由26个英文字母组成的字符串：^[A-Za-z]+$<br />
+验证由26个大写英文字母组成的字符串：^[A-Z]+$<br />
+验证由26个小写英文字母组成的字符串：^[a-z]+$<br />
+验证由数字和26个英文字母组成的字符串：^[A-Za-z0-9]+$<br />
+验证由数字、26个英文字母或者下划线组成的字符串：^\\w+$<br />
+验证用户密码:^[a-zA-Z]\\w{5,17}$ 正确格式为：以字母开头，长度在6-18之间，只能包含字符、数字和下划线。<br />
+验证是否含有 ^%&amp;\',;=?$\\\" 等字符：[^%&amp;\',;=?$\\x22]+<br />
+验证汉字：^[\\u4e00-\\u9fa5],{0,}$<br />
+验证Email地址：^\\w+[-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$<br />
+验证InternetURL：^http://([\\w-]+\\.)+[\\w-]+(/[\\w-./?%&amp;=]*)?$ ；^[a-zA-z]+://(w+(-w+)*)(.(w+(-w+)*))*(?S*)?$<br />
+验证电话号码：^(\\(\\d{3,4}\\)|\\d{3,4}-)?\\d{7,8}$：--正确格式为：XXXX-XXXXXXX，XXXX-XXXXXXXX，XXX-XXXXXXX，XXX-XXXXXXXX，XXXXXXX，XXXXXXXX。<br />
+验证身份证号（15位或18位数字）：^\\d{15}|\\d{}18$<br />
+验证一年的12个月：^(0?[1-9]|1[0-2])$ 正确格式为：“01”-“09”和“1”“12”<br />
+验证一个月的31天：^((0?[1-9])|((1|2)[0-9])|30|31)$ 正确格式为：01、09和1、31。<br />
+整数：^-?\\d+$<br />
+非负浮点数（正浮点数 + 0）：^\\d+(\\.\\d+)?$<br />
+正浮点数 ^(([0-9]+\\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\\.[0-9]+)|([0-9]*[1-9][0-9]*))$<br />
+非正浮点数（负浮点数 + 0） ^((-\\d+(\\.\\d+)?)|(0+(\\.0+)?))$<br />
+负浮点数 ^(-(([0-9]+\\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\\.[0-9]+)|([0-9]*[1-9][0-9]*)))$<br />
+浮点数 ^(-?\\d+)(\\.\\d+)?$<br /></div> 
+						<div class="articlelink">相关链接：<a href="" target="_blank"></a></div> 
+						<div class="articlefooter">亲们~！有事就点“<a href="tencent://message/?uin=286142784&Menu=yes">就Q我</a>"，多支持和提出好的建议！以后会做的更好 ……</div>
+						<div class="articleother">
+							<div>上一篇：<a href="http://www.91lsme.com/article/61.shtml">PHP计算字符串长度</a></div>
+							<div>下一篇：<a href="http://www.91lsme.com/article/54.shtml">windows apache httpd.conf 配置虚拟主机方法</a></div>
+						</div>
+					</div>
+					<div class="cbottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ </div>
+				</div>
+			</div>
+			<!-- 低部 -->
+			<div class="bottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul>
+	<li><a href="http://www.91lsme.com">版权信息</a></li>
+	<li><a href="http://www.91lsme.com">建站说明</a></li>
+	<li><a href="http://www.91lsme.com">设为首页</a></li>
+	<li><a href="http://www.91lsme.com">加入收藏</a></li>
+</ul> 
+<br/><br/>
+<div class="bw">Copyright © 2014-2015 tylergong <a href="http://www.91lsme.com" target="_blank">www.91lsme.com</a> All rights reserved. <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备 14059724号</a></div> 
+<div style="display: none;">
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4e12425c4f2ca16acaab6b2a8cdc8fbc' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</div>
+ </div>
+		</div>
+	</body>
+</html>

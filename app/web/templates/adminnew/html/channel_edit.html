@@ -1,0 +1,43 @@
+<form class="layui-form" method="post">
+    <div class="layui-form-item" style="margin-top:10px;">
+        <label class="layui-form-label">频道名称</label>
+        <div class="layui-input-block">
+            <input type="text" name="cname" placeholder="请输入" autocomplete="off" class="layui-input"
+                   style="width: 200px;">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">是否展示</label>
+        <div class="layui-input-block">
+            <input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest" title="开关">
+            <input type="checkbox" name="" title="写作" checked>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="submit">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</form>
+<script>
+    layui.use(['layer', 'form'], function () {
+        var $ = layui.jquery,
+            layer = parent.layer === undefined ? layui.layer : parent.layer,
+            form = layui.form();
+
+        form.on('submit(submit)', function (data) {
+            //layer.msg(JSON.stringify(data.field));
+            var param = 'cname=' + data.field.cname + '&open=' + data.field.open;
+            $.post('/adminnew-loginsub', param, function (rtn) {
+                if (rtn.error == 0) {
+                    //window.location.href = '/adminnew';
+                } else {
+                    layer.msg(rtn.message);
+                    return;
+                }
+            }, 'json');
+            return false;
+        });
+    });
+</script>

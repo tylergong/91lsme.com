@@ -1,0 +1,72 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 标题 -->
+<div class="title">
+	<div class="icon manager"></div><div class="word">广告管理</div>
+	<div class="bank" onclick="menu.tourl('/admin-adlist')">返回广告列表</div>
+</div>
+<!-- 详细内容 -->
+<div class="detail">
+	<form id="formToUpdate" method="post" action="#" enctype="multipart/form-data">
+		<table border="1" class="table2">
+			<tr>
+				<td class="titleTd">ID：</td>
+				<td class="mainTd">{$ad.id}<input type="hidden" name="id" id="id" value="{$ad.id}"></td>
+			</tr>
+			<tr>
+				<td class="titleTd">广告图：</td>
+				<td class="mainTd">
+					<img src="{$ad.imgurl}" height="50"/>
+					<br/>
+					<input type="text" value="{$ad.imgurl}" id="imgurl" name="imgurl" size="60"  />
+					<br/>
+					<input type="file" name="cimgurl">(尺寸：670*80)
+				</td>
+			</tr>
+			<tr>
+				<td class="titleTd">说明：</td>
+				<td class="mainTd"><input type="text" id="title" name="title"  value="{$ad.title}"/></td>
+			</tr>
+			<tr>
+				<td class="titleTd">是否链接：</td>
+				<td class="mainTd">
+					<label><input type="radio" name="is_link" id="is_link" value="1" {if $ad.is_link eq 1}checked="checked"{/if} />是</label>
+					<label><input type="radio" name="is_link" id="is_link" value="0" {if $ad.is_link eq 0}checked="checked"{/if}/>否 </label>
+					<br/>
+					<input type="text" name="jumpurl" id="jumpurl" value="{$ad.jumpurl}" size="50" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="hidden" name="type" id="type" value="{$type}">
+					<div id="submit" class="icon"></div> 
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+<script type="text/javascript">
+	$('#submit').click(function() {
+		var _type = $('#type').val();
+		$("#formToUpdate").ajaxSubmit({
+			type: 'post',
+			url: '/admin-adedit',
+			dataType: "json",
+			success: function(data) {
+				if (data) {
+					alert('操作成功');
+					if (_type == 'add') {
+						_type = 'edit';
+					}
+					menu.tourl('/admin-ad?type=' + _type + '&id=' + data);
+				} else {
+					alert('操作失败');
+				}
+			},
+			error: function(XmlHttpRequest, textStatus, errorThrown) {
+				console.log(XmlHttpRequest);
+				console.log(textStatus);
+				console.log(errorThrown);
+			}
+		});
+	});
+</script>

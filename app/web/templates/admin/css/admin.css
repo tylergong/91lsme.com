@@ -1,0 +1,122 @@
+* {margin: 0;padding: 0;}
+body {background-color: #257abb;font-family: '微软雅黑';font-size: 14px;}
+.icon,.drop {background: url(/app/web/templates/admin/image/admin.png) no-repeat scroll;display: inline-block;}
+ul {list-style-type: none;}
+a {text-decoration: none;}
+
+/* 总框架 */
+.all {width: 980px;margin:0 auto;}
+
+/* 头部 */
+.top {width: 980px;height: 62px;float: left;background: url(/app/web/templates/admin/image/top.png) no-repeat scroll;color: #fff;}
+.top .description{margin: 20px 0 0 31px;float:left;width: 400px;}
+#username {color: #f7e65a;font-weight: bold;}
+.top .topNav {float: right;margin: 20px 35px 0 0 ;}
+.top .topNav a {color: #fff;}
+.top .icon {width: 15px;height: 15px;padding-left: 5px;margin-left: 10px;}
+.top .index {background-position: -325px -116px;}
+.top .refresh {background-position: -297px -116px;}
+.top .writeoff {background-position: -349px -116px;}
+.top .exit {background-position: -374px -116px}
+
+/* 中部*/
+.content {width: 100%;float: left;background-color: #d4ebff;margin-top: 5px;margin: 0 auto;overflow: hidden;padding-bottom: 1px;}
+
+/* 左边导航 */
+.left {width: 225px;border: #137bd7 1px solid;border-radius: 5px;float: left;margin: 1px 0 0 1px;}
+.lnav {background-color: #fff;float: left;width: 215px;border-radius: 5px;margin:5px;display: inline;}
+.lnav .title {width: 208px;height: 28px;background-color: #3f8fd5;margin: 5px auto;color: #fff;font-weight: bold;line-height: 28px;text-align: center;cursor:pointer;}
+
+/* 底 */
+.footer {text-align: center; font-size: 12px; float: left;margin-left: 230px;}
+
+/*第一级菜单*/
+.lnav ul {margin: 15px auto;width: 156px;margin-bottom: 120px;}
+.lnav ul .menu1{width: 156px;height: 30px;background-color: #e8e8e8;border: 1px solid #e0e0e0;border-radius: 5px;margin-bottom: 15px;cursor: pointer;font-weight: bold;}
+.lnav ul li.on {background-color: #f7e65a;}
+.menu1 .icon {height: 18px;width: 17px;margin:7px 0 0 5px;float: left;display: block;}
+.lnav li .anno{background-position: 0 -18px;}
+.lnav li .product{background-position: 0 -38px;}
+.lnav li .news{background-position: 0 -58px;}
+.lnav li .resources{background-position: 0 -78px;}
+.lnav li .link{background-position: 0 -98px;}
+.lnav li .message{background-position: 0 -118px;}
+.lnav li .system{background-position: 0 -141px;}
+.lnav li .related{background-position: 0 -164px;}
+.lnav .navWord {height: 30px;line-height: 30px;width: 110px;float: left;margin-left: 5px;}
+.lnav .drop {width: 10px;height: 12px;background-position: -40px 0;margin-top: 10px;}
+.lnav .on .drop {background-position: -26px 0;}
+
+/* 第二级菜单 */
+.menu2 {height: auto;}
+.menu2 ul {margin: 0 auto;text-align: center;width: 100px;}
+.menu2 li {width: 156px;height: 30px;}
+.menu2 .icon {width: 12px;height: 12px;background-position: -110px -58px;float: left;}
+.menu2 .word {float: left;margin-top: -4px;margin-left: 6px;text-align: left;}
+.menu2 a {color: #000;cursor:pointer;}
+
+
+/*主要内容*/
+.main{width: 725px;float: right;margin:1px 1px 0 0;border: #137bd7 1px solid;border-radius: 5px;}
+
+/*标题*/
+.main .title {width: 695px; height: 36px;background-color: #50a0e6;margin:15px;margin-bottom: 5px;line-height: 40px;}
+.main .title .manager {background-position: -25px -21px;width: 12px;height: 12px;margin: 14px 5px 0;float: left;}
+.main .title .word {float: left;color: #fff;font-weight: bold;}
+.add {height: 29px;width: 68px;background-position: -30px -73px;float: right;margin:3px 5px 0 0;cursor:pointer;}
+
+.bank {height: 29px;background-position: -30px -73px;float: right;margin:0px 20px 0 0;cursor:pointer; color: #fff;}
+.show {color:#fff;background-color: #50a0e6;position: absolute;display: none;width: 200px;overflow: hidden;word-wrap:break-word; word-break:break-all; }
+
+/*搜索框*/
+.main .search {height: 22px;float: right;margin: 0 15px 5px 0;display: inline;}
+.search .text {float: left;}
+.search #btnSearch {width: 40px;height: 21px;background-position: -122px 0;cursor: pointer;margin-left:15px;float: left;}
+.search input {border: 1px solid #84b3d6;}
+
+/*详细内容 index*/
+.detail {width: 710px;background-color: #fff;border-radius: 5px;float: left;margin-left: 7px;display: inline;}
+table.table1 {border-collapse:collapse;border: 1px solid #cfcece;text-align: center;width: 690px;margin: 7px 0 10px 10px;}
+table.table1 td,th {border: solid #cfcece;height: 28px;}
+table.table1 td {border-width: 0 1px 0 1px;font-size: 12px;}
+table.table1 td div a {height: 18px;width: 17px;margin:0 auto; display: block;background-position: 0 -18px;background-image: url(/app/web/templates/admin/image/admin.png);cursor:pointer;}
+table.table1 th {background-color: #e7eff7;border-width: 1px;}
+.odd {background-color: #fff;}
+.even {background-color: #d4ebff;}
+
+/*详细内容 alert*/
+table.table2 {background-color: #edf1fd;border-collapse:collapse;border: 1px solid #cfcece;margin: 7px 0 10px 10px;width: 690px;}
+table.table2 td {border:1px solid #fff;height: 40px;}
+table.table2 td.titleTd {text-align: right;width: 15%;}
+table.table2 td.mainTd {padding-left: 5px;}
+table.table2 td.onceTd {text-align: center;}
+table.table2 td.onceTd span { cursor:pointer}
+table.table2 td.onceTd .kai { background-color: #00ee00;}
+table.table2 td.onceTd .guan { background-color: #cfcece;}
+table.table2 .icon {width: 93px;height: 30px;cursor: pointer;}
+#submit {background-position: -163px -33px;margin-left: 100px;float: left;}
+#reset {background-position: -293px -33px;margin-left: 35px;float: left;}
+.preview {margin-left: 30px;}
+
+/*分页*/
+.pagination {width: 710px;font-size: 12px;text-align: center;margin-bottom: 10px;}
+.pagination a {text-decoration: underline;color: #fff;cursor:pointer;} 
+.pagination .select {color: #666;background-color: #f7f7f7;display: inline-block;height: 20px;line-height: 20px;width: 105px;}
+.select span {color:#2379c4;cursor:pointer;}
+#go {color: red;margin-left: 5px;}
+#page {width: 20px;margin: 0 5px;}
+#delete,#recycle {margin: 0 30px 0 10px;color: red;cursor:pointer;}
+.pagiL {float: left;height: 20px;margin: 5px 0 0 10px;}
+.pagiR {float: right;height: 20px;margin: 5px 18px 0 0;}
+.pagiR a { margin:0 5px}
+.pagiR span { margin:0 5px;}
+
+/* 操作*/
+.operating {width: 700px;height: 38px;background:url(/app/web/templates/admin/image/do.png) repeat-x;margin:0 auto 10px;text-align: center;line-height: 28px;}
+
+/*对话框*/
+#alertbg {display:none;width: 100%;height: 100%;background: #000;position: absolute;filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity:0.5;opacity: 0.5;left: 0px;margin-top: -120px;}
+#alert {display:none;width: 379px;height: 172px;position: absolute;background: url(/app/web/templates/admin/image/alert.png) no-repeat scroll;color:#dc8107;left: 50%;top: 50%;margin: -300px 0 0 -190px;}
+#alert a {color: #dc8107;font-size: 14px;padding: 0 19px;}
+#alert .select {margin: 130px 0 0 160px;width: 145px;}
+#alert .icon {background-position: -23px -42px;width: 22px;height: 22px;cursor: pointer;float: right;margin: 10px 10px 0 0;}   

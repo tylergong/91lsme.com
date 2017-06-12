@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue测试文章编辑</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="shortcut icon" type="image/ico" href="/app/web/templates/public/image/favicon.ico">
+    <script src="/plugin/vue/vue.min.js"></script>
+    <script src="/plugin/vue/axios.min.js"></script>
+    <link href="/app/web/templates/articlelist/static/vuetest.css" rel="stylesheet">
+</head>
+<body>
+<div id="article-detail" class="page-bar">
+    <table class="table2">
+        <tr>
+            <td class="titleTd">文章ID：</td>
+            <td class="mainTd">{{ details.id }}
+                <span>
+					<a :href="'/article?id='+ details.id" target="_blank">预览</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				</span>
+                <input type="hidden" name="id" v-model="details.id">
+            </td>
+        </tr>
+        <tr>
+            <td class="titleTd"><span style="color:red">(*)</span>文章标题：</td>
+            <td class="mainTd">
+                <input type="text" name="title" v-model="details.title" size="50"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="titleTd"><span style="color:red">(*)</span>文章分类：</td>
+            <td class="mainTd">
+                <label v-for="(item,key) in cnames">
+                    <input type="radio" name="channel" v-model="details.cid" :value="key"/>{{ item }}
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="titleTd">是否超链：</td>
+            <td class="mainTd">
+                <label>
+                    <input type="radio" name="is_link" v-model="details.is_link" value="1"/>是
+                </label>
+                <label>
+                    <input type="radio" name="is_link" v-model="details.is_link" value="0"/>否
+                </label>
+                <input type="text" name="jumpurl" v-model="details.jumpurl" size="50"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="titleTd">是否显示：</td>
+            <td class="mainTd">
+                <label>
+                    <input type="radio" name="is_show" v-model="details.is_show" value="1"/>是
+                </label>
+                <label>
+                    <input type="radio" name="is_show" v-model="details.is_show" value="0"/>否
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="titleTd">是否置顶：</td>
+            <td class="mainTd">
+                <label>
+                    <input type="radio" name="is_up" v-model="details.up" value="1"/>是
+                </label>
+                <label>
+                    <input type="radio" name="is_up" v-model="details.up" value="0"/>否
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="titleTd">相关链接：</td>
+            <td class="mainTd">
+                <input type="text" name="rel_link" v-model="details.rel_link" size="50"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="titleTd">发布日期：</td>
+            <td class="mainTd">
+                <link rel="stylesheet" type="text/css" href="/plugin/jedate/skin/jedate.css"/>
+                <script type="text/javascript" src="/plugin/jedate/jquery-1.7.2.js"></script>
+                <script type="text/javascript" src="/plugin/jedate/jquery.jedate.min.js"></script>
+                <input id="create_time" type="text" readonly placeholder="请选择" v-model="details.create_time">
+            </td>
+        </tr>
+    </table>
+    <a href="javascript:;" @click="sub">提交</a>
+    <a href="/articlelist/vuetest.shtml?cid=0">返回列表</a>
+</div>
+<script src="/app/web/templates/articlelist/static/vuetestadd.js"></script>
+<script>
+    $.jeDate("#create_time", {
+        skinCell: "jedateblue",//日期风格样式，默认蓝色
+        format: "YYYY-MM-DD hh:mm:ss",//日期格式
+        isTime: true,//是否开启时间选择 默认false
+        isToday: true,//是否显示今天或本月 默认true
+        isok: true,//是否显示确定按钮 默认true
+        festival: true,////是否显示农历节日 默认false
+        minDate: "1900-01-01 00:00:00",//最小日期
+        maxDate: "2099-12-31 23:59:59",//最大日期
+        choosefun: function (elem, val, date) {
+            vm.details.create_time = val
+        },//选中日期后的回调, elem当前输入框ID, val当前选择的值, date当前完整的日期值
+        clearfun: function (elem, val) {
+            vm.details.create_time = ''
+        },//清除日期后的回调, elem当前输入框ID, val当前选择的值
+        okfun: function (elem, val, date) {
+            vm.details.create_time = val
+        },//点击确定后的回调, elem当前输入框ID, val当前选择的值, date当前完整的日期值
+        success: function (elem) {
+        },//层弹出后的成功回调方法, elem当前输入框ID
+    })
+</script>
+</body>
+</html>

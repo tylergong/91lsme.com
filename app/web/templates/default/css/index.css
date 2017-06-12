@@ -1,0 +1,29 @@
+/* CSS Document */
+.center {width: 700px;float: left;}
+.list {width: 415px;margin-left: 20px;float: left;}
+
+.more {float: right;margin-top: 10px;}
+.line_1,.line_2{width: 100%;height:5px;background: url(/app/web/templates/public/image/line_1.png) repeat-x;float: left;}
+
+.listMain{width: 100%;overflow: hidden;float: left;margin-bottom: 30px;}
+.title{position: relative;}
+.titleImg {float: left;width: 250px;}
+.listMain ul {margin-top: 5px;}
+.listMain li {width: 100%; font-size: 14px;height: 24px;}
+.listMain a {color: #79510b;text-decoration: none;}
+.listMain a:hover{color: red;}
+.listMain span {color: #f96a51; font-weight: bold;font-size: 20px;}
+.listMain span.ctime { float: right; font-size: 12px; color: #999; margin-top: 8px; }
+.listup a{color: red;}
+.line {width: 5px; height: 515px;float:left;background: url(/app/web/templates/default/image/line.png) no-repeat;}
+
+.right {float: left;width: 240px;margin-left: 10px;}
+.rightWord {width: 220px;height: 70px;background: url(/app/web/templates/default/image/copy.png) no-repeat right;margin-left: 5px;}
+.rW {font-size: 10px;}
+.connect {padding: 25px 0 0 10px;}
+.line_2 {width: 100%;margin-top: 15px}
+.rightImg {width: 220px;margin: 10px 0 0 15px;}
+.rightw {width: 190px;margin: 25px 0 0 20px;}
+.rightw b{ color: red;}
+
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <link rel="stylesheet" href="/plugin/layui/css/layui.css" media="all"/>
+    <link rel="stylesheet" href="/app/web/templates/adminnew/css/global.css" media="all">
+    <link rel="stylesheet" href="/plugin/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/app/web/templates/adminnew/css/table.css"/>
+</head>
+
+<body>
+<div class="admin-main">
+    <blockquote class="layui-elem-quote">
+        <div class="layui-inline">
+            <a href="javascript:;" class="layui-btn layui-btn-small" id="add">
+                <i class="layui-icon">&#xe608;</i> 添加信息
+            </a>
+        </div>
+    </blockquote>
+    <fieldset class="layui-elem-field">
+        <legend>数据列表</legend>
+        <div class="layui-field-box">
+            <table class="site-table table-hover">
+                <thead>
+                <tr>
+                    <th>频道ID</th>
+                    <th>频道名称</th>
+                    <th>是否展示</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {foreach from=$list key=k item=i name=n}
+                <tr>
+                    <td>{$i.id}</td>
+                    <td>{$i.cname}</td>
+                    <td>{if $i.is_show eq 1}是{else}否{/if}</td>
+                    <td>
+                        <a href="javascript:;" class="layui-btn layui-btn-mini" id="edit">编辑</a>
+                        <a href="javascript:;" data-id="1" data-opt="del"
+                           class="layui-btn layui-btn-danger layui-btn-mini">删除</a>
+                    </td>
+                </tr>
+                {/foreach}
+                </tbody>
+            </table>
+        </div>
+    </fieldset>
+</div>
+<script type="text/javascript" src="/plugin/layui/layui.js"></script>
+<script>
+    layui.config({
+        base: '/plugin/layui/lay/modiles/'
+    });
+
+    layui.use(['layer', 'form'], function () {
+        var $ = layui.jquery,
+            layer = parent.layer === undefined ? layui.layer : parent.layer;
+
+        $('#add,#edit').on('click', function () {
+            $.get('/app/web/templates/adminnew/html/channel_edit.html', null, function (form) {
+                layer.open({
+                    type: 1,
+                    title: '添加表单',
+                    content: form,
+                    area: ['500px', '250px'],
+                    maxmin: true,
+                    yes: function (index) {
+                        console.log(index);
+                    },
+                    full: function (elem) {
+                        var win = window.top === window.self ? window : parent.window;
+                        $(win).on('resize', function () {
+                            var $this = $(this);
+                            elem.width($this.width()).height($this.height()).css({
+                                top: 0,
+                                left: 0
+                            });
+                            elem.children('div.layui-layer-content').height($this.height() - 95);
+                        });
+                    }
+                });
+            });
+        });
+    });
+</script>
+</body>
+
+</html>

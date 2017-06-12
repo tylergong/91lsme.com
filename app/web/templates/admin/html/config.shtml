@@ -1,0 +1,80 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 标题 -->
+<div class="title">
+	<div class="icon manager"></div><div class="word">配置文件</div> 
+</div> 
+<!-- 详细内容 -->
+<div class="detail">
+	<table border="1" class="table2">
+		<tr>
+			<td class="titleTd">网站路径：</td>
+			<td class="mainTd"><input type="text" id="web_url" value="{$web_url}"  size="50" /></td>
+		</tr>
+		<tr>
+			<td class="titleTd">图片路径：</td>
+			<td class="mainTd"><input type="text" id="cdn_url" value="{$cdn_url}" size="50" /></td>
+		</tr> 
+		<tr>
+			<td class="titleTd">网站标题：</td>
+			<td class="mainTd"><input type="text" id="web_title" value="{$web_title}" size="50"  /></td>
+		</tr> 
+		<tr>
+			<td class="titleTd">后台标题：</td>
+			<td class="mainTd"><input type="text" id="admin_title" value="{$admin_title}" size="50"  /></td>
+		</tr>
+		<tr>
+			<td class="titleTd">keywords：</td>
+			<td class="mainTd"><input type="text" id="web_keywords" value="{$web_keywords}" size="50"  /></td>
+		</tr> 
+		<tr>
+			<td class="titleTd">description：</td>
+			<td class="mainTd"><input type="text" id="web_description" value="{$web_description}" size="70"  /></td>
+		</tr> 
+		<tr>
+			<td colspan="2">
+				<div id="submit" class="icon" id="submit"></div>
+			</td>
+		</tr>
+	</table>
+</div>
+<script type="text/javascript">
+	function empty_c(str) {
+		return (str == "" || str == null || str == undefined || str == 0) ? true : false
+	}
+
+	$('#submit').click(function() {
+		var web_url = $('#web_url');
+		var cdn_url = $('#cdn_url');
+		var web_title = $('#web_title');
+		var web_keywords = $('#web_keywords');
+		var web_description = $('#web_description');
+		if (empty_c(web_url.val())
+				|| empty_c(cdn_url.val())
+				|| empty_c(web_title.val())
+				|| empty_c(web_keywords.val())
+				|| empty_c(web_description.val())
+				) {
+			alert('配置不能有空选项');
+			return;
+		}
+		var data = "web_url=" + web_url.val() +
+				"&cdn_url=" + cdn_url.val() +
+				"&web_title=" + web_title.val() +
+				"&web_keywords=" + web_keywords.val() +
+				"&web_description=" + web_description.val() +
+				"&_r=" + Math.random();
+		$.ajax({
+			type: "POST",
+			url: "/admin-configedit",
+			data: data,
+			dataType: "json",
+			success: function(data) {
+				if (data > 0) {
+					alert('修改成功');
+				} else {
+					alert('对不起，修改失败或暂无权限！！！');
+				}
+			}
+		});
+	});
+</script>

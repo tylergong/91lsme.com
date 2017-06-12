@@ -1,0 +1,9 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul class="navMain">
+	<li><a href="{#web_url#}/"><img src="{#cdn_url#}/app/web/templates/public/image/nav1.png"/></a></li>
+	<li><a href="{#web_url#}/articlelist{if $is_static}/1_1.shtml{else}?type=1{/if}"><img src="{#cdn_url#}/app/web/templates/public/image/nav2.png"/></a></li>
+	<li><a href="{#web_url#}/articlelist{if $is_static}/2_1.shtml{else}?type=2{/if}"><img src="{#cdn_url#}/app/web/templates/public/image/nav3.png"/></a></li>
+	<li><a href="{#web_url#}/articlelist{if $is_static}/3_1.shtml{else}?type=3{/if}"><img src="{#cdn_url#}/app/web/templates/public/image/nav4.png"/></a></li>
+	<li><a href="{#web_url#}/articlelist{if $is_static}/4_1.shtml{else}?type=4{/if}"><img src="{#cdn_url#}/app/web/templates/public/image/nav5.png"/></a></li>
+	<li><a href="{#web_url#}/article{if $is_static}/14.shtml{else}?id=14{/if}"><img src="{#cdn_url#}/app/web/templates/public/image/nav6.png"/></a></li>
+</ul>

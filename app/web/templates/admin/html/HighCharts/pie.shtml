@@ -1,0 +1,6 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+{include file="app/web/templates/admin/html/HighCharts/js.shtml"}
+<!--<script type="text/javascript" src="/plugin/highcharts/highcharts-3d.js"></script> 
+<script type="text/javascript" src="/plugin/highcharts/highcharts-more.js"></script> -->
+<div id="container_pie"> </div> 
+<script type="text/javascript" src="/app/web/templates/admin/js/HighCharts/pie.js"></script>

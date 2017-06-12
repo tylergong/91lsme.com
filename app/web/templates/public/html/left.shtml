@@ -1,0 +1,15 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="leftImg"><img src="{#cdn_url#}/app/web/templates/public/image/leftImg.png"></div>
+<div class="leftWord">
+	<div class="titleL"><img src="{#cdn_url#}/app/web/templates/public/image/listen.png"></div>
+	<div class="wordL">
+		<div class="tM"><span>⊙</span> 前言阵地 </div>
+		<div class="cM" style="text-indent:2em"> 经过很长时间奋战，就要听我说个人网终于建成，还有很多不成熟和欠缺的地方 ，希望大家多多支持和提出好的建议！以后会做的更好 ……</div>
+	</div>   
+	<script type="text/javascript" src="/plugin/highcharts/highcharts.js"></script>  
+	<script type="text/javascript" src="/plugin/highcharts/highcharts-more.js"></script>
+	<script type="text/javascript" src="/plugin/highcharts/themes/grid.js"></script>
+	<script type="text/javascript" src="/app/web/templates/public/js/clock.js"></script>
+	<div class="lefttime" id="container_clock"></div>
+	<div class="leftad"></div>
+</div>

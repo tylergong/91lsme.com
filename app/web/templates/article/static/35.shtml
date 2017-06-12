@@ -1,0 +1,165 @@
+<!--  -->
+<!doctype html>
+<html>
+	<head>
+		<title>PHP一些有意思的小知识——就要听我说 91lsme.com</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="就要听我说,听我说,91lsme,listen me">
+		<meta name="description" content="就要听我说个人网站，分感知、觉醒、践行、随笔4大主题，内容充实丰富，思想充满创意，作品精益求精。">
+		<link rel="shortcut icon" type="image/ico" href="http://www.91lsme.com/app/web/templates/public/image/favicon.ico">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/public/css/css.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/article/css/article.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/plugin/editor/plugins/code/prettify.css" type="text/css">
+		<script type="text/javascript" src="http://www.91lsme.com/plugin/jquery/jquery-1.6.4.min.js"></script>
+	</head>
+
+	<body>
+		<div class="main"> 
+			<!-- 顶部 -->
+			<div class="top"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="logo"><a href="http://www.91lsme.com"><img src="http://www.91lsme.com/app/web/templates/public/image/logo.png"></a></div>
+<div class="Qme"><a href="tencent://message/?uin=286142784&Menu=yes"><img src="http://www.91lsme.com/app/web/templates/public/image/Qme.png"></a></div>
+ </div>
+			<!-- 导航 -->
+			<div class="nav"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul class="navMain">
+	<li><a href="http://www.91lsme.com/"><img src="http://www.91lsme.com/app/web/templates/public/image/nav1.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/1_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav2.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/2_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav3.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/3_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav4.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/4_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav5.png"/></a></li>
+	<li><a href="http://www.91lsme.com/article/14.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav6.png"/></a></li>
+</ul>
+ </div>
+			<div class="content"> 
+				<!-- 左边框 -->
+				<div class="left"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="leftImg"><img src="http://www.91lsme.com/app/web/templates/public/image/leftImg.png"></div>
+<div class="leftWord">
+	<div class="titleL"><img src="http://www.91lsme.com/app/web/templates/public/image/listen.png"></div>
+	<div class="wordL">
+		<div class="tM"><span>⊙</span> 前言阵地 </div>
+		<div class="cM" style="text-indent:2em"> 经过很长时间奋战，就要听我说个人网终于建成，还有很多不成熟和欠缺的地方 ，希望大家多多支持和提出好的建议！以后会做的更好 ……</div>
+	</div>   
+	<script type="text/javascript" src="/plugin/highcharts/highcharts.js"></script>  
+	<script type="text/javascript" src="/plugin/highcharts/highcharts-more.js"></script>
+	<script type="text/javascript" src="/plugin/highcharts/themes/grid.js"></script>
+	<script type="text/javascript" src="/app/web/templates/public/js/clock.js"></script>
+	<div class="lefttime" id="container_clock"></div>
+	<div class="leftad"></div>
+</div>
+ </div>
+				<div class="centerAndRight"> 
+					<!-- 空白框 -->
+					<div class="ad">  </div>
+					<div class="center">
+						<div class="title">
+							<div class="titleImg">
+								<img src="http://www.91lsme.com/app/web/templates/default/image/speaks.png"/>
+							</div>
+						</div>  
+						<div class="articleTitle">PHP一些有意思的小知识</div>
+						<div class="time">2014-12-24</div>
+						<div class="line_1"></div>
+						<div class="articleMain"><strong>单引号\'和双引号\"的区别：</strong><br />
+首先是单引号要比双引号执行效率要高，因为双引号会对内容进行预处理。<br />
+例如：\'$value\' 输出字符 $value ; \"$value\"输出变量$value的值。<br />
+<br />
+<strong>char和varchar的区别：</strong><br />
+char是定长而varchar是变长，char的主要特点是存储方式预分配，varchar当它的数据长度发生变化时会影响其存储的页分配。<br />
+char与varchar2是一对矛盾的统一体，两者是互补的关系.&nbsp;<br />
+varchar2比char节省空间，在效率上比 char会稍微差一些，即要想获得效率，就必须牺牲一定的空间，这也就是我们在数据库设计上常说的‘以空间换效率\'。&nbsp;<br />
+varchar2 虽然比 char节省空间，但是如果一个varchar2列经常被修改，而且每次被修改的数据的长度不同，这会引起‘行迁移\'(row migration)现象，而这造成多余的i/o，是数据库设计和调整中要尽力避免的，在这种情况下用 char代替varchar2会更好一些。<br />
+<br />
+<strong>mysql_connect和mysql_pconnect的区别</strong><br />
+引用exceed php club论坛上的朋友原话：<br />
+php中mysql_pconnect()的实现方式:&nbsp;<br />
+其实mysql_pconnect()本身并没有做太多的处理, 它唯一做的只是在php运行结束后不主动close掉mysql的连接.&nbsp;<br />
+mysql_pconnect()与此同时mysql_connect()的区别:<br />
+cgi方式下:<br />
+在php经cgi方式运行时pconnect和connect是基本没有区别的, 因为cgi方式是每一个php访问起一个进程, 访问结束后进程也就结束了, 资源也全释放了.&nbsp;<br />
+apache模块方式下:<br />
+区别在于当php以apache模块方式运行时, 由于apache有使用进程池, 一个httpd进程结束后会被放回进程池, 这也就使得用pconnect打开的的那个mysql连接资源不被释放, 于是有下一个连接请求时就可以被复用.<br />
+这就使得在apache并发访问量不大的时候, 由于使用了pconnect, php节省了反复连接db的时间, 使得访问速度加快. 这应该是比较好理解的.<br />
+但是在apache并发访问量大的时候, 如果使用pconnect, 会由于之前的一些httpd进程占用的mysql连接没有close, 则可能会因为mysql已经达到最大连接着, 使得之后的一些请求永远得不到满足.<br />
+例如:&nbsp;<br />
+若mysql最大连接数设为500, 而apache的最大同时访问数设为2000<br />
+假设所有访问都会要求访问db, 而且操作时间会比较长<br />
+当前500个请求的httpd都没有结束的时候...之后的httd进程都是无法连接到mysql的(因已经达到mysql最大连接数). 只有当前500个httpd进程结束或被复用才可以连接得到了mysql.<br />
+其实这个也很好解释了xgy_p的测试中若操作比较简单, pconnect比connect效率高很多, 而且跟使用jsp的连接池的速度比较接近. 因为这个时候httpd进程可以不断的给复用.<br />
+而 当db操作复杂, 耗时较长时, 因httpd会fork很多并发进程处理, 而先产生的httpd进程不释放db连接, 使得后产生的httpd进程无法连上db. 因为这样没有复用其它httpd进程的mysql连接. 于是会就产生很多连接超时, 像一开始的1000个并发连接测试说几乎都是连接超时就是这个原因.<br />
+---<br />
+(反进来看jsp用的如果是纯粹的db连接池, 则不会有因为达到mysql连接上限而连不上的问题, 因为jsp的连接池会使得可以等待其它连接使用完毕并复用. )<br />
+因此在并发访问量不高时,使用pconnect可以简单提高访问速度, 但在并发量增大后, 是否再使用pconnect就要看程序员的选择了..<br />
+就我个人认为, php现在对mysql的连接并没有真正用到连接池, pconnect也只是相当于借了apache的进程池来用, 所以在并发访问量大的时候pconnect并不能很好的提高访问db效率. 在这一点上. php的确比不上jsp.<br />
+就目前的这种情况, 如果并发量大的话, 我个人建议最好还用mysql_connect.&nbsp;<br />
+<br />
+<strong>include和require的区别</strong><br />
+以下取自phpchina.cn<br />
+php的require()性能与include()相类似。不同之处在于，对include()来说，在include()执行时文件每次都要进行读 取和评估；而对于require()来说，文件只处理一次（实际上，文件内容替换了require()语句）。这就意味着如果有包含这些指令之一的代码和 可能执行多次的代码，则使用require()效率比较高。另一方面，如果每次执行代码时相读取不同的文件，或者有通过一组文件叠代的循环，就使用 include(),因为可以给想要包括的文件名设置一个变量，当参数为include()时使用这个变量。<br />
+include 在执行时，如果 include 进来的文件发生错误的话，不会立刻停止；而 require 则会立刻终止程序，不再往下执行。<br />
+include 可以用在循环； require 不行。<br />
+以下取自ricky<br />
+1，require是无条件包含也就是如果一个流程里加入require,无论条件成立与否都会先执行require<br />
+这个已经不适用了，因为require 可以包含变量指向的文件如<br />
+<br />
+if($a = 1){<br />
+$file = \'1.php\';<br />
+}else{<br />
+$file = \'2.php\';<br />
+}<br />
+require($file);<br />
+<br />
+2，包含文件不存在或者语法错误的时候require是致命的， include不是<br />
+<br />
+3，include有返回值，而require没有(可能因为如此require的速度比include快)<br />
+$login = include(\'test.php\');<br />
+if(!empty($login)){<br />
+echo \"文件包含成功\";<br />
+}else{<br />
+echo \"文件包含失败\";<br />
+}<br />
+<br />
+引用文件的方法有两种：require 及 include。两种方式提供不同的使用弹性。<br />
+<br />
+require 的使用方法如 require(\"myrequirefile.php\"); 。这个函数通常放在 php 程序的最前面，php 程序在执行前，就会先读入 require 所指定引入的文件，使它变成 php 程序网页的一部份。常用的函数，亦可以这个方法将它引入网页中。<br />
+<br />
+include 使用方法如 include(\"myincludefile.php\"); 。这个函数一般是放在流程控制的处理部分中。php 程序网页在读到 include 的文件时，才将它读进来。这种方式，可以把程序执行时的流程简单化。<br />
+<br />
+<strong>isset()和empty()的区别&nbsp;</strong><br />
+两者都是测试变量用的，但是isset()是测试变量是否被赋值，而empty()是测试一个已经被赋值的变量是否为空。 &nbsp;<br />
+<br />
+如果一个变量没被赋值就引用在php里是被允许的,但会有notice提示，如果一个变量被赋空值，$foo=\"\"或者$foo=0或者 $foo=false,那么empty($foo)返回真，isset($foo)也返回真，就是说赋空值不会注销一个变量。 &nbsp;<br />
+&nbsp;<br />
+要注销一个变量，可以用 unset($foo)或者$foo=null<br /></div> 
+						<div class="articlelink">相关链接：<a href="http://hi.baidu.com/tylergong/item/c0b152865febecdbd1f8cd48" target="_blank">http://hi.baidu.com/tylergong/item/c0b152865febecdbd1f8cd48</a></div> 
+						<div class="articlefooter">亲们~！有事就点“<a href="tencent://message/?uin=286142784&Menu=yes">就Q我</a>"，多支持和提出好的建议！以后会做的更好 ……</div>
+						<div class="articleother">
+							<div>上一篇：<a href="http://www.91lsme.com/article/37.shtml">php post 提交后 刷新页面重复提交 解决方案</a></div>
+							<div>下一篇：<a href="http://www.91lsme.com/article/29.shtml">php iframe 下 IE session 失效解决办法</a></div>
+						</div>
+					</div>
+					<div class="cbottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ </div>
+				</div>
+			</div>
+			<!-- 低部 -->
+			<div class="bottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul>
+	<li><a href="http://www.91lsme.com">版权信息</a></li>
+	<li><a href="http://www.91lsme.com">建站说明</a></li>
+	<li><a href="http://www.91lsme.com">设为首页</a></li>
+	<li><a href="http://www.91lsme.com">加入收藏</a></li>
+</ul> 
+<br/><br/>
+<div class="bw">Copyright © 2014-2015 tylergong <a href="http://www.91lsme.com" target="_blank">www.91lsme.com</a> All rights reserved. <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备 14059724号</a></div> 
+<div style="display: none;">
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4e12425c4f2ca16acaab6b2a8cdc8fbc' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</div>
+ </div>
+		</div>
+	</body>
+</html>

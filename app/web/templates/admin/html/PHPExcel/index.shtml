@@ -1,0 +1,16 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 标题 -->
+<div class="title">
+	<div class="icon manager"></div><div class="word">PHPExcel</div> 
+</div>
+<!-- 详细内容 -->
+<div class="detail"> 
+	<div style="text-align: center;"> 
+		<input type="button" value="导出Excel" id="pedown">
+	</div>
+</div>
+<script type="text/javascript">
+	$('#pedown').click(function() {
+		window.location.href = '/admin-PHPExcel-down';
+	});
+</script>

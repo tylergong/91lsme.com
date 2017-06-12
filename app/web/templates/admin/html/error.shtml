@@ -1,0 +1,14 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 标题 -->
+<div class="title">
+	<div class="icon manager"></div><div class="word">Show Error</div> 
+</div> 
+<!-- 详细内容 -->
+<div class="detail">
+	<table border="1" class="table2">
+		<tr>
+			<td class="titleTd"></td>
+			<td class="mainTd">{$str}</td>
+		</tr> 
+	</table>
+</div>

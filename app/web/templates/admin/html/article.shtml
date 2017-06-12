@@ -1,0 +1,151 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 标题 -->
+<div class="title">
+	<div class="icon manager"></div>
+	<div class="word">文章管理</div>
+	<div class="bank" onclick="menu.tourl('/admin-articlelist')">返回文章列表</div>
+</div>
+<!-- 详细内容 -->
+<div class="detail">
+	<table border="1" class="table2">
+		<tr>
+			<td class="titleTd">文章ID：</td>
+			<td class="mainTd">{$article.id}
+				<input type="hidden" name="id" id="id" value="{$article.id}">
+				<span class="preview">
+					<a href="/article?id={$article.id}" target="_blank">预览</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+					<!-- <input type="button" value="生成静态页" id="clearindex" onclick="menu.upActicle({$article.id}, {$article.cid}, this);" /> -->
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="titleTd"><span style="color:red">(*)</span>文章标题：</td>
+			<td class="mainTd"><input type="text" value="{$article.title}" id="title" name="title" size="50" /></td>
+		</tr>
+		<tr>
+			<td class="titleTd"><span style="color:red">(*)</span>文章分类：</td>
+			<td class="mainTd">
+				<!-- {section name=cl loop=$clist} -->
+				<label><input type="radio" name="channel" id="channel" value="{$clist[cl].id}" {if $article.cid eq $clist[cl].id}checked="checked"{/if} />{$clist[cl].cname}</label>
+				<!-- {/section} -->
+			</td>
+		</tr>
+		<tr>
+			<td class="titleTd">是否超链：</td>
+			<td class="mainTd">
+				<label><input type="radio" name="is_link" id="is_link" value="1" {if $article.is_link eq 1}checked="checked"{/if} />是</label>
+				<label><input type="radio" name="is_link" id="is_link" value="0" {if $article.is_link eq 0}checked="checked"{/if}/>否</label>
+				<br/>
+				<input type="text" name="jumpurl" id="jumpurl" value="{$article.jumpurl}" size="50" />
+			</td>
+		</tr>
+		<tr>
+			<td class="titleTd">是否显示：</td>
+			<td class="mainTd">
+				<label><input type="radio" name="is_show" id="is_show" value="1" {if $article.is_show eq 1}checked="checked"{/if} />是</label>
+				<label><input type="radio" name="is_show" id="is_show" value="0" {if $article.is_show eq 0}checked="checked"{/if}/>否</label>
+			</td>
+		</tr>		
+		<tr>
+			<td class="titleTd">是否置顶：</td>
+			<td class="mainTd">
+				<label><input type="radio" name="is_up" id="is_up" value="1" {if $article.up eq 1}checked="checked"{/if} />是</label>
+				<label><input type="radio" name="is_up" id="is_up" value="0" {if $article.up eq 0}checked="checked"{/if}/>否</label>
+			</td>
+		</tr>		
+		<tr>
+			<td class="titleTd">发布日期：</td>
+			<td class="mainTd">
+				<link rel="stylesheet" type="text/css" href="/plugin/calendar/calendar-blue.css"/>
+				<script type="text/javascript" src="/plugin/calendar/calendar.js"></script>
+				<script type="text/javascript" src="/plugin/calendar/calendar-setup.js"></script>
+				<script type="text/javascript" src="/plugin/calendar/lang/calendar-en.js"></script>
+				<script type="text/javascript" src="/plugin/calendar/lang/calendar-zh.js"></script>
+				<input type="text" id="cal-field-1" />
+				<button type="submit" id="cal-button-1">...</button>
+			</td>
+		</tr>
+		<tr>
+			<td class="titleTd">相关链接：</td>
+			<td class="mainTd"> 
+				<input type="text" name="rel_link" id="rel_link" value="{$article.rel_link}" size="50" />
+			</td>
+		</tr>
+		<tr>
+			<td class="titleTd">内容：</td>
+			<td class="mainTd"> 
+				<link rel="stylesheet" href="/plugin/editor/themes/default/default.css" />
+				<link rel="stylesheet" href="/plugin/editor/plugins/code/prettify.css" type="text/css">
+				<script type="text/javascript" charset="utf-8" src="/plugin/editor/kindeditor-min.js"></script>
+				<script type="text/javascript" charset="utf-8" src="/plugin/editor/lang/zh_CN.js"></script>
+				<link rel="stylesheet" href="/plugin/editor/plugins/code/prettify.js" type="text/css">
+				<textarea name="content" style="width:560px;height:400px;">{$article.content}</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="hidden" name="type" id="type" value="{$type}">
+				<div id="submit" class="icon"></div>
+			</td>
+		</tr>
+	</table>
+</div>
+<script type="text/javascript">
+		$(function() {
+			// 日历控件
+			Calendar.setup({
+				inputField: "cal-field-1",
+				button: "cal-button-1",
+				align: "Tr"
+			});
+
+			// 编辑器
+			var editor = KindEditor.create('textarea[name="content"]');
+
+			// 提交数据
+			$('#submit').click(function() {
+				// 编辑器数据同步
+				editor.sync();
+
+				var id = $('#id').val();
+				var title = $('#title').val();
+				var cid = $('input[name="channel"]:checked').val();
+				var is_show = $('input[name="is_show"]:checked').val();
+				var is_link = $('input[name="is_link"]:checked').val();
+				var is_up = $('input[name="is_up"]:checked').val();
+				var jumpurl = $('#jumpurl').val();
+				var rel_link = $('#rel_link').val();
+				var type = $('#type').val();
+				var content = $('textarea[name="content"]').val();
+				if (empty_c(title) || empty_c(cid)) {
+					alert('请确保*标内容不为空');
+					return false;
+				}
+
+				KindEditor.ajax('/admin-articleedit', function(data) {
+					if (data) {
+						alert('操作成功');
+						if (type == 'add') {
+							type = 'edit';
+						}
+						menu.tourl('/admin-article?type=' + type + '&id=' + data);
+					} else {
+						alert('操作失败');
+					}
+				}, 'POST', {
+					id: id,
+					title: title,
+					cid: cid,
+					is_show: is_show,
+					is_link: is_link,
+					is_up: is_up,
+					jumpurl: jumpurl,
+					rel_link: rel_link,
+					content: content,
+				});
+			});
+			function empty_c(str) {
+				return (str == "" || str == null || str == undefined || str == 0) ? true : false
+			}
+		});
+</script>

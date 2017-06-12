@@ -1,0 +1,348 @@
+<!--  -->
+<!doctype html>
+<html>
+	<head>
+		<title>PHP :time(),date(),mktime()区别——就要听我说 91lsme.com</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="就要听我说,听我说,91lsme,listen me">
+		<meta name="description" content="就要听我说个人网站，分感知、觉醒、践行、随笔4大主题，内容充实丰富，思想充满创意，作品精益求精。">
+		<link rel="shortcut icon" type="image/ico" href="http://www.91lsme.com/app/web/templates/public/image/favicon.ico">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/public/css/css.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/article/css/article.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/plugin/editor/plugins/code/prettify.css" type="text/css">
+		<script type="text/javascript" src="http://www.91lsme.com/plugin/jquery/jquery-1.6.4.min.js"></script>
+	</head>
+
+	<body>
+		<div class="main"> 
+			<!-- 顶部 -->
+			<div class="top"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="logo"><a href="http://www.91lsme.com"><img src="http://www.91lsme.com/app/web/templates/public/image/logo.png"></a></div>
+<div class="Qme"><a href="tencent://message/?uin=286142784&Menu=yes"><img src="http://www.91lsme.com/app/web/templates/public/image/Qme.png"></a></div>
+ </div>
+			<!-- 导航 -->
+			<div class="nav"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul class="navMain">
+	<li><a href="http://www.91lsme.com/"><img src="http://www.91lsme.com/app/web/templates/public/image/nav1.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/1_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav2.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/2_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav3.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/3_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav4.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/4_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav5.png"/></a></li>
+	<li><a href="http://www.91lsme.com/article/14.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav6.png"/></a></li>
+</ul>
+ </div>
+			<div class="content"> 
+				<!-- 左边框 -->
+				<div class="left"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="leftImg"><img src="http://www.91lsme.com/app/web/templates/public/image/leftImg.png"></div>
+<div class="leftWord">
+	<div class="titleL"><img src="http://www.91lsme.com/app/web/templates/public/image/listen.png"></div>
+	<div class="wordL">
+		<div class="tM"><span>⊙</span> 前言阵地 </div>
+		<div class="cM" style="text-indent:2em"> 经过很长时间奋战，就要听我说个人网终于建成，还有很多不成熟和欠缺的地方 ，希望大家多多支持和提出好的建议！以后会做的更好 ……</div>
+	</div>   
+	<script type="text/javascript" src="/plugin/highcharts/highcharts.js"></script>  
+	<script type="text/javascript" src="/plugin/highcharts/highcharts-more.js"></script>
+	<script type="text/javascript" src="/plugin/highcharts/themes/grid.js"></script>
+	<script type="text/javascript" src="/app/web/templates/public/js/clock.js"></script>
+	<div class="lefttime" id="container_clock"></div>
+	<div class="leftad"></div>
+</div>
+ </div>
+				<div class="centerAndRight"> 
+					<!-- 空白框 -->
+					<div class="ad">  </div>
+					<div class="center">
+						<div class="title">
+							<div class="titleImg">
+								<img src="http://www.91lsme.com/app/web/templates/default/image/study.png"/>
+							</div>
+						</div>  
+						<div class="articleTitle">PHP :time(),date(),mktime()区别</div>
+						<div class="time">2015-01-04</div>
+						<div class="line_1"></div>
+						<div class="articleMain">PHP :time(),date(),mktime()日期与时间函数库{经常会忘却掉}<br />
+checkdate ： 验证日期的正确性。<br />
+date ： 将服务器的时间格式化。<br />
+strftime ： 将服务器的时间本地格式化。<br />
+getdate ： 获得时间及日期信息。<br />
+gettimeofday ： 取得目前时间。<br />
+gmdate ： 取得目前与 GMT 差后的时间。<br />
+easter_date ： 计算复活节日期。<br />
+easter_days ： 计算复活节与三月廿一日之间日期数。<br />
+mktime ： 取得 UNIX 时间戳记。<br />
+gmmktime ： 取得 UNIX 时间戳记的格林威治时间。<br />
+time ： 取得目前时间的 UNIX 时间戳记。<br />
+microtime ： 取得目前时间的 UNIX 时间戳记的百万分之一秒值。<br />
+<p>
+	<br />
+</p>
+<p>
+	<strong>checkdate</strong> 验证日期的正确性。
+</p>
+语法： int checkdate(int month, int day, int year);<br />
+返回值： 整数<br />
+函数种类： 时间日期<br />
+内容说明 若日期是有效的则返回 true，若日期有问题，则返回 false。本函数可以用来检查日期是否有效。有效范围如下：<br />
+年 为 0 至 32767 年<br />
+月 为 1 至 12 月<br />
+日 则随着月份及闰年变化<br />
+<p>
+	<br />
+</p>
+<p>
+	<strong>date</strong> 将服务器的时间格式化。
+</p>
+语法： string date(string format, int [timestamp]);<br />
+返回值： 字符串<br />
+函数种类： 时间日期<br />
+内容说明返回值的?字符串依配置的格式来决定。若有传入时间戳记值，则将时间戳记格式化返回；若无传入时间戳记值，则将目前服务器的时间格式化返回。要将日期转为其它的语系格式，应使用setlocale() 及 strftime() 二个函数。字符串格式化的选项如下：<br />
+a - \"am\" 或是 \"pm\"<br />
+A - \"AM\" 或是 \"PM\"<br />
+d - 几日，二位数字，若不足二位则前面补零; 如： \"01\" 至 \"31\"<br />
+D - 星期几，三个英文字母; 如： \"Fri\"<br />
+F - 月份，英文全名; 如： \"January\"<br />
+h - 12 小时制的小时; 如： \"01\" 至 \"12\"<br />
+H - 24 小时制的小时; 如： \"00\" 至 \"23\"<br />
+g - 12 小时制的小时，不足二位不补零; 如： \"1\" 至 12\"<br />
+G - 24 小时制的小时，不足二位不补零; 如： \"0\" 至 \"23\"<br />
+i - 分钟; 如： \"00\" 至 \"59\"<br />
+j - 几日，二位数字，若不足二位不补零; 如： \"1\" 至 \"31\"<br />
+l - 星期几，英文全名; 如： \"Friday\"<br />
+m - 月份，二位数字，若不足二位则在前面补零; 如： \"01\" 至 \"12\"<br />
+n - 月份，二位数字，若不足二位则不补零; 如： \"1\" 至 \"12\"<br />
+M - 月份，三个英文字母; 如： \"Jan\"<br />
+s - 秒; 如： \"00\" 至 \"59\"<br />
+S - 字尾加英文序数，二个英文字母; 如： \"th\"，\"nd\"<br />
+t - 指定月份的天数; 如： \"28\" 至 \"31\"<br />
+U - 总秒数<br />
+w - 数字型的星期几，如： \"0\" (星期日) 至 \"6\" (星期六)<br />
+Y - 年，四位数字; 如： \"1999\"<br />
+y - 年，二位数字; 如： \"99\"<br />
+z - 一年中的第几天; 如： \"0\" 至 \"365\"<br />
+其它不在上列的字符则直接列出该字符。<br />
+使用范例，范例一：<br />
+<pre class=\"prettyprint lang-php\">&lt;?
+print(date( \"l dS of F Y h：i：s A\" ));
+print(\"July 1, 2000 is on a \" . date(\"l\", mktime(0,0,0,7,1,2000)));
+?&gt;</pre>
+范例二：<br />
+<pre class=\"prettyprint lang-php\">&lt;?
+$tomorrow = mktime(0,0,0,date(\"m\") ,date(\"d\")+1,date(\"Y\"));
+$lastmonth = mktime(0,0,0,date(\"m\")-1,date(\"d\"), date(\"Y\"));
+$nextyear = mktime(0,0,0,date(\"m\"), date(\"d\", date(\"Y\")+1);
+?&gt;</pre>
+参考 gmdate() mktime()<br />
+<p>
+	<br />
+</p>
+<p>
+	<strong>strftime</strong> 将服务器的时间本地格式化。
+</p>
+语法： string strftime(string format, int [timestamp]);<br />
+返回值： 字符串<br />
+函数种类： 时间日期<br />
+内容说明返回值的字符串依配置的格式来决定。若有传入时间戳记值，则将时间戳记格式化返回；若无传入时间戳记值，则将目前服务器的时间本地格式化返回。月份或者星期名称随着本地语系配置 setlocale() 的不同而改变。<br />
+返回的字符串可以依下列的格式而定：<br />
+%a 星期几的缩写。<br />
+%A 星期几的全名。<br />
+%b 月份名称的缩写。<br />
+%B 月份名称的全名。<br />
+%c 本地端日期时间较佳表示字符串。<br />
+%d 用数字表示本月的第几天 (范围为 00 至 31)。<br />
+%H 用 24 小时制数字表示小时数 (范围为 00 至 23)。<br />
+%I 用 12 小时制数字表示小时数 (范围为 01 至 12)。<br />
+%j 以数字表示当年度的第几天 (范围为 001 至 366)。<br />
+%m 月份的数字 (范围由 1 至 12)。<br />
+%M 分钟。<br />
+%p 以 \'AM\' 或 \'PM\' 表示本地端时间。<br />
+%S 秒数。<br />
+%U 数字表示为本年度的第几周，第一个星期由第一个周日开始。<br />
+%W 数字表示为本年度的第几周，第一个星期由第一个周一开始。<br />
+%w 用数字表示本周的第几天 ( 0 为周日)。<br />
+%x 不含时间的日期表示法。<br />
+%X 不含日期的时间表示法。<br />
+%y 二位数字表示年份 (范围由 00 至 99)。<br />
+%Y 完整的年份数字表示，即四位数。<br />
+%Z 时区或名称缩写。<br />
+%% % 字符。<br />
+使用范例<br />
+<pre class=\"prettyprint lang-php\">&lt;?php
+setlocale (\"LC_TIME\", \"C\");
+print(strftime(\"%A in Finnish is \"));
+setlocale (\"LC_TIME\", \"fi\");
+print(strftime(\"%A, in French \"));
+setlocale (\"LC_TIME\", \"fr\");
+print(strftime(\"%A and in German \"));
+setlocale (\"LC_TIME\", \"de\");
+print(strftime(\"%A.n\"));
+?&gt;</pre>
+参考 setlocale() mktime()<br />
+<p>
+	<br />
+</p>
+<p>
+	<strong>getdate</strong> 获得时间及日期信息。
+</p>
+语法： array getdate(int timestamp);<br />
+返回值： 数组<br />
+函数种类： 时间日期<br />
+内容说明 返回数组的元素包括下列的项目：<br />
+\"seconds\" - 秒<br />
+\"minutes\" - 分<br />
+\"hours\" - 时<br />
+\"mday\" - 当月的第几天<br />
+\"wday\" - 当周的第几天数字<br />
+\"mon\" - 月份数字<br />
+\"year\" - 年，数字<br />
+\"yday\" - 当年的第几天数字; 如： \"299\"<br />
+\"weekday\" - 星期几全名; 如： \"Friday\"<br />
+\"month\" - 月份全名; 如： \"January\"<br />
+<p>
+	<br />
+</p>
+<p>
+	<strong>gettimeofday</strong> 取得目前时间。
+</p>
+语法： array gettimeofday(void);<br />
+返回值： 数组<br />
+函数种类： 时间日期<br />
+内容说明 返回数组的元素包括下列的项目：<br />
+\"sec\" - 秒<br />
+\"usec\" - 百万分之一秒<br />
+\"minuteswest\" - 格林威治时间的分<br />
+\"dsttime\" - 目的的时区<br />
+<p>
+	<br />
+</p>
+<p>
+	<strong>gmdate</strong> 取得目前与 GMT 差后的时间。
+</p>
+语法： string gmdate(string format, int timestamp);<br />
+返回值： 字符串<br />
+函数种类： 时间日期<br />
+内容说明 本函数与 date() 函数相似，不同的是本函数返回与格林威治标准时间 (Greenwich Mean Time, GMT) 时间差后的时间<br />
+使用范例<br />
+<pre class=\"prettyprint lang-php\">&lt;?php
+echo date( \"M d Y H：i：s\",mktime(0,0,0,1,1,1998) );
+echo gmdate( \"M d Y H：i：s\",mktime(0,0,0,1,1,1998) );
+?&gt;</pre>
+若执行本范例的机器在芬兰 (Finland, GMT +0200)，返回的结果为：
+Jan 01 1998 00：00：00
+Dec 31 1997 22：00：00
+参考 date() mktime() gmmktime()
+easter_date　计算复活节日期。
+语法： int easter_date(int [year]);
+返回值： 整数
+函数种类： 时间日期
+内容说明： 输入某一年份，则以 UNIX 时间戳记的格式返回该年的复活节日期，若没有输入年份，则计算当年的日期。值的?注意的是输入的年份必需在公元 1970 至 2037 年之间，否则无法计算。
+使用范例
+<pre class=\"prettyprint lang-php\">&lt;?
+echo date(\"M-d-Y\", easter_date(1999));
+echo date(\"M-d-Y\", easter_date(2000));
+echo date(\"M-d-Y\", easter_date(2001));
+?&gt;</pre>
+返回结果为<br />
+Apr-04-1999<br />
+Apr-23-2000<br />
+Apr-15-2001<br />
+<p>
+	<br />
+</p>
+<p>
+	<strong>easter_days</strong> 计算复活节与三月廿一日之间日期数。
+</p>
+语法： int easter_days(int [year]);<br />
+返回值： 整数<br />
+函数种类： 时间日期<br />
+内容说明 输入某一年份，则以计算该年复活节与三月二十一日之间的日期数，若没有输入年份，则以当年计算。这个函数可以用来替代 easter_date() 1970-2037 年外范围无法计算的问题。<br />
+使用范例<br />
+<pre class=\"prettyprint lang-php\">&lt;?
+echo easter_days(1999);
+echo easter_days(1492);
+echo easter_days(1913);&nbsp;</pre>
+<pre class=\"prettyprint lang-php\">?&gt;</pre>
+返回结果为：<br />
+14 (4/4)<br />
+32 (4/22)<br />
+2 (3/23)<br />
+参考 easter_date()<br />
+<p>
+	<br />
+</p>
+<p>
+	<strong>mktime</strong> 取得 UNIX 时间戳记。
+</p>
+语法： int mktime(int hour, int minute, int second, int month, int day, int year);<br />
+返回值： 整数<br />
+函数种类： 时间日期<br />
+内容说明： 输入一个时间，则返回 UNIX 时间戳记的长整数。<br />
+使用范例<br />
+<pre class=\"prettyprint lang-php\">&lt;?
+echo date( \"M-d-Y\", mktime(0,0,0,12,32,1997) );
+echo date( \"M-d-Y\", mktime(0,0,0,13,1,1997) );
+echo date( \"M-d-Y\", mktime(0,0,0,1,1,1998) );
+?&gt;</pre>
+参考 date() time()<br />
+<p>
+	<br />
+</p>
+<p>
+	<strong>gmmktime</strong> 取得 UNIX 时间戳记的格林威治时间。
+</p>
+语法： int gmmktime(int hour, int minute, int second, int month, int day, int year);<br />
+返回值： 整数<br />
+函数种类： 时间日期<br />
+内容说明： 输入一个时间，则返回 UNIX 的格林威治时间戳记的长整数。<br />
+<p>
+	<br />
+</p>
+<p>
+	<strong>time</strong> 取得目前时间的 UNIX 时间戳记。
+</p>
+语法： int time(void);<br />
+返回值： 整数<br />
+函数种类： 时间日期<br />
+内容说明 返回目前时间的戳记值。<br />
+参考 date()<br />
+<p>
+	<br />
+</p>
+<p>
+	<strong>microtime</strong> 取得目前时间的 UNIX 时间戳记的百万分之一秒值。
+</p>
+语法： string microtime(void);<br />
+返回值： 字符串<br />
+函数种类： 时间日期<br />
+内容说明 返回目前时间的百万分之一秒戳记值。若操作系统没有提供 gettimeofday() 的系统呼叫函数，则本函数亦无效。<br /></div> 
+						<div class="articlelink">相关链接：<a href="http://hi.baidu.com/tylergong/item/c8ccff4ec606f4ef1e19bc4a" target="_blank">http://hi.baidu.com/tylergong/item/c8ccff4ec606f4ef1e19bc4a</a></div> 
+						<div class="articlefooter">亲们~！有事就点“<a href="tencent://message/?uin=286142784&Menu=yes">就Q我</a>"，多支持和提出好的建议！以后会做的更好 ……</div>
+						<div class="articleother">
+							<div>上一篇：<a href="http://www.91lsme.com/article/59.shtml">MySQL数据库中与 NULL值有关的几个问题</a></div>
+							<div>下一篇：<a href="http://www.91lsme.com/article/53.shtml">php 删除文件夹里所有静态页</a></div>
+						</div>
+					</div>
+					<div class="cbottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ </div>
+				</div>
+			</div>
+			<!-- 低部 -->
+			<div class="bottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul>
+	<li><a href="http://www.91lsme.com">版权信息</a></li>
+	<li><a href="http://www.91lsme.com">建站说明</a></li>
+	<li><a href="http://www.91lsme.com">设为首页</a></li>
+	<li><a href="http://www.91lsme.com">加入收藏</a></li>
+</ul> 
+<br/><br/>
+<div class="bw">Copyright © 2014-2015 tylergong <a href="http://www.91lsme.com" target="_blank">www.91lsme.com</a> All rights reserved. <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备 14059724号</a></div> 
+<div style="display: none;">
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4e12425c4f2ca16acaab6b2a8cdc8fbc' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</div>
+ </div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,509 @@
+<!--  -->
+<!doctype html>
+<html>
+<head>
+    <title>就要听我说 91lsme.com</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="就要听我说,听我说,91lsme,listen me">
+    <meta name="description" content="就要听我说个人网站，分感知、觉醒、践行、随笔4大主题，内容充实丰富，思想充满创意，作品精益求精。">
+    <meta name="baidu-site-verification" content="sBgDPEYv7n"/>
+    <link rel="shortcut icon" type="image/ico" href="http://www.91lsme.com/app/web/templates/public/image/favicon.ico">
+    <script src="/plugin/vue/vue.min.js"></script>
+    <script src="/plugin/vue/axios.min.js"></script>
+    <script src="/plugin/vue/lodash.min.js"></script>
+</head>
+
+<body>
+
+<div id="app">
+    {{ message }}
+    <{$a}>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!'
+        }
+    })
+</script>
+
+<div id="app-2">
+    <a v-bind:title="message" :href="url" target="_blank">
+        鼠标悬停几秒钟查看此处动态绑定的提示信息！
+    </a>
+</div>
+<script>
+    var app2 = new Vue({
+        el: '#app-2',
+        data: {
+            message: '页面加载于 ' + new Date(),
+            url: 'http://www.baidu.com'
+        }
+    })
+</script>
+
+<div id="app-3">
+    <p v-if="seen">现在你看到我了</p>
+</div>
+<script>
+    var app3 = new Vue({
+        el: '#app-3',
+        data: {
+            seen: true
+        }
+    })
+</script>
+
+<div id="app-4">
+    <ol>
+        <li v-for="todo in todos">
+            {{ todo.text }}
+        </li>
+    </ol>
+</div>
+<script>
+    var app4 = new Vue({
+        el: '#app-4',
+        data: {
+            todos: [
+                {text: '学习 JavaScript'},
+                {text: '学习 Vue'},
+                {text: '整个牛项目'}
+            ]
+        }
+    })
+    app4.todos.push({text: '新项目'})
+</script>
+
+<div id="app-5">
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">逆转消息</button>
+    <button @click="reverseMessage">逆转消息</button>
+</div>
+<script>
+    var app5 = new Vue({
+        el: '#app-5',
+        data: {
+            message: 'Hello Vue.js!'
+        },
+        methods: {
+            reverseMessage: function () {
+                this.message = this.message.split('').reverse().join('')
+            }
+        }
+    })
+
+</script>
+
+
+<div id="app-6">
+    <p>{{ message }}</p>
+    <input v-model="message">
+</div>
+<script>
+    var app6 = new Vue({
+        el: '#app-6',
+        data: {
+            message: 'Hello Vue!'
+        }
+    })
+</script>
+
+
+<div id="app-7">
+    <ol>
+        <!-- 现在我们为每个todo-item提供待办项对象 -->
+        <!-- 待办项对象是变量，即其内容可以是动态的 -->
+        <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+    </ol>
+</div>
+<script>
+    var app7 = new Vue({
+        el: '#app-7',
+        data: {
+            groceryList: [
+                {text: '蔬菜'},
+                {text: '奶酪'},
+                {text: '随便其他什么人吃的东西'}
+            ]
+        }
+    })
+    var vm = new Vue({
+        data: {
+            a: 1
+        },
+        created: function () {
+            // `this` 指向 vm 实例
+            console.log('a is: ' + this.a)
+        }
+    })
+</script>
+
+
+<div id="app-9">
+    <p>Original message: "{{ message }}"</p>
+    <p>Computed reversed message: "{{ reversedMessage }}"</p>
+    <button @click="reversedMessage2">methods</button>
+</div>
+<script>
+    var app9 = new Vue({
+        el: '#app-9',
+        data: {
+            message: 'Hello'
+        },
+        computed: {
+            reversedMessage: function () {
+                //return this.message.split('').reverse().join('')
+                return Date.now()
+            }
+        },
+        methods: {
+            reversedMessage2: function () {
+                this.message = Date.now()
+            }
+        }
+    })
+</script>
+
+
+<div id="app-10">
+    <p>{{ reversedMessage }}</p>
+    <input v-model="message">
+</div>
+<script>
+    var app10 = new Vue({
+        el: '#app-10',
+        data: {
+            message: 1
+        },
+        computed: {
+            reversedMessage: function () {
+                return this.message * 2
+            }
+        },
+    })
+</script>
+
+
+<div id="app-11">{{ fullName }}</div>
+<script>
+    var app11 = new Vue({
+        el: '#app-11',
+        data: {
+            firstName: 'Foo',
+            lastName: 'Bar'
+        },
+        computed: {
+            fullName: function () {
+                return this.firstName + ' ' + this.lastName
+            }
+        }
+    })
+</script>
+
+
+<div id="app-12">
+    <p>
+        Ask a yes/no question:
+        <input v-model="question">
+    </p>
+    <p>{{ answer }}</p>
+</div>
+<script>
+    var app12 = new Vue({
+        el: '#app-12',
+        data: {
+            question: '',
+            answer: 'I cannot give you an answer until you ask a question!'
+        },
+        watch: {
+            // 如果 question 发生改变，这个函数就会运行
+            question: function (newQuestion) {
+                this.answer = 'Waiting for you to stop typing...'
+                this.getAnswer()
+            }
+        },
+        methods: {
+            // _.debounce 是一个通过 lodash 限制操作频率的函数。
+            // 在这个例子中，我们希望限制访问yesno.wtf/api的频率
+            // ajax请求直到用户输入完毕才会发出
+            // 学习更多关于 _.debounce function (and its cousin
+            // _.throttle), 参考: https://lodash.com/docs#debounce
+            getAnswer: _.debounce(
+                function () {
+                    var vm = this
+                    if (this.question.indexOf('?') === -1) {
+                        vm.answer = 'Questions usually contain a question mark. ;-)'
+                        return
+                    }
+                    vm.answer = 'Thinking...'
+                    axios.get('https://yesno.wtf/api')
+                        .then(function (response) {
+                            vm.answer = _.capitalize(response.data.answer)
+                        })
+                        .catch(function (error) {
+                            vm.answer = 'Error! Could not reach the API. ' + error
+                        })
+                },
+                // 这是我们为用户停止输入等待的毫秒数
+                500
+            )
+        }
+    })
+</script>
+
+
+<div id="app-13">
+    <h1 v-if="ok">Yes</h1>
+    <h1 v-else>No</h1>
+</div>
+<script>
+    var app13 = new Vue({
+        el: '#app-13',
+        data: {
+            ok: false
+        }
+    })
+</script>
+
+
+<div id="app-14">
+    <div v-if="Math.random() > 0.5">
+        Now you see me
+    </div>
+    <div v-else>
+        Now you don't
+    </div>
+</div>
+<script>
+    var app14 = new Vue({
+        el: '#app-14',
+    })
+</script>
+
+
+<div id="app-15">
+    <ul>
+        <li v-for="(value, key, index) in object">
+            {{ index }}. {{ key }} : {{ value }}
+        </li>
+    </ul>
+</div>
+<script>
+    var app15 = new Vue({
+        el: '#app-15',
+        data: {
+            object: {
+                FirstName: 'John',
+                LastName: 'Doe',
+                Age: 30
+            }
+        }
+    })
+</script>
+
+<div id="app-16">
+    <li v-for="n in evenNumbers">{{ n }}</li>
+    <li v-for="i in 10">{{ i }}</li>
+</div>
+<script>
+    var app16 = new Vue({
+        el: '#app-16',
+        data: {
+            numbers: [1, 2, 3, 4, 5]
+        },
+        computed: {
+            evenNumbers: function () {
+                return this.numbers.filter(function (number) {
+                    return number % 2 === 0
+                })
+            }
+        }
+    })
+</script>
+
+
+<div id="app-17">
+    <!-- `greet` 是在下面定义的方法名 -->
+    <button v-on:click="greet">Greet</button>
+</div>
+<script>
+    var app17 = new Vue({
+        el: '#app-17',
+        data: {
+            name: 'Vue.js'
+        },
+        // 在 `methods` 对象中定义方法
+        methods: {
+            greet: function () {
+                // `this` 在方法里指当前 Vue 实例
+                alert('Hello ' + this.name + '!')
+            }
+        }
+    })
+    // 也可以用 JavaScript 直接调用方法
+    //app17.greet() // -> 'Hello Vue.js!'
+</script>
+
+
+<div id="app-18">
+    <input type="radio" v-model="picked" value="a">
+    <span>Picked: {{ picked }}</span>
+</div>
+<script>
+    var app18 = new Vue({
+        el: '#app-18',
+        data: {
+            picked: ''
+        }
+    })
+</script>
+
+
+<div id="app-19">
+    <my-component></my-component>
+</div>
+<script>
+    // 注册
+    Vue.component('my-component', {
+        template: '<div>A custom component!</div>'
+    })
+    // 创建根实例
+    new Vue({
+        el: '#app-19'
+    })
+</script>
+
+<div id="app-20">
+    <simple-counter></simple-counter>
+    <simple-counter></simple-counter>
+    <simple-counter></simple-counter>
+</div>
+<script>
+    Vue.component('simple-counter', {
+        template: '<button v-on:click="counter += 1">{{ counter }}</button>',
+        //我们可以通过为每个组件返回全新的 data 现在每个 counter 都有它自己内部的状态了
+        data: function () {
+            return {
+                counter: 0
+            }
+        }
+    })
+    new Vue({
+        el: '#app-20'
+    })
+</script>
+
+<div id="app-21">
+    <p>{{ total }}</p>
+    <button-counter v-on:increment="incrementTotal"></button-counter>
+    <button-counter v-on:increment="incrementTotal"></button-counter>
+</div>
+<script>
+        // 注册一个按钮组件
+        Vue.component('button-counter', {
+            template: '<button v-on:click="increment">{{ counter }}</button>',
+            data: function () {
+                return {
+                    counter: 0
+                }
+            },
+            methods: {
+                increment: function () {
+                    this.counter += 1
+                    this.$emit('increment')
+                }
+            },
+        })
+        new Vue({
+            el: '#app-21',
+            data: {
+                total: 0
+            },
+            methods: {
+                incrementTotal: function () {
+                    this.total += 1
+                }
+            }
+        })
+</script>
+<div id="app-22">
+    <example></example>
+</div>
+<script>
+    Vue.component('example', {
+        template: '<span @click="updateMessage">{{ message }}</span>',
+        data: function () {
+            return {
+                message: 'not updated'
+            }
+        },
+        methods: {
+            updateMessage: function () {
+                this.message = 'updated'
+                console.log(this.$el.textContent) // => '没有更新'
+                this.$nextTick(function () {
+                    console.log(this.$el.textContent) // => '更新完成'
+                })
+            }
+        }
+    })
+    // 创建根实例
+    new Vue({
+        el: '#app-22'
+    })
+
+</script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+<div id="example-4">
+    <button @click="show = !show">
+        Toggle
+    </button>
+    <transition
+            v-on:before-enter="beforeEnter"
+            v-on:enter="enter"
+            v-on:leave="leave"
+            v-bind:css="false"
+    >
+        <p v-if="show">
+            Demo
+        </p>
+    </transition>
+</div>
+
+<script>
+    new Vue({
+        el: '#example-4',
+        data: {
+            show: false
+        },
+        methods: {
+            beforeEnter: function (el) {
+                el.style.opacity = 0
+                el.style.transformOrigin = 'left'
+            },
+            enter: function (el, done) {
+                Velocity(el, { opacity: 1, fontSize: '1.4em' }, { duration: 300 })
+                Velocity(el, { fontSize: '1em' }, { complete: done })
+            },
+            leave: function (el, done) {
+                Velocity(el, { translateX: '15px', rotateZ: '50deg' }, { duration: 600 })
+                Velocity(el, { rotateZ: '100deg' }, { loop: 2 })
+                Velocity(el, {
+                    rotateZ: '45deg',
+                    translateY: '30px',
+                    translateX: '30px',
+                    opacity: 0
+                }, { complete: done })
+            }
+        }
+    })
+</script>
+
+
+</body>
+</html>

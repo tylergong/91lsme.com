@@ -1,0 +1,55 @@
+* {margin:0;padding: 0;}
+li {list-style: none;float: left;}
+img{border:none;}
+body{font-family: '微软雅黑';font-size:  12px;}
+a { text-decoration: none;}
+.main {width: 1000px;height:auto;margin:0 auto;background: url(/app/web/templates/public/image/bg.png) repeat-y;}
+.top {width: 100%;height: 114px;background:url(/app/web/templates/public/image/title.png);border-bottom: 2px solid #000;position: relative;}
+.logo{position: absolute;top: -4px;left: 75px;}
+
+.nav {width: 100%;height: 43px;position: relative;}
+.navMain{width: 650px;height: 43px;position: absolute;left: 310px;margin-top: 10px;}
+.content{width: 100%;}
+.centerAndRight {float: left;width: 700px;}
+
+.left {float: left;margin-left: 67px;width: 192px;margin-top: -12px; height: 945px;}
+.leftImg {width: 192px;height: 370px;background: url(/app/web/templates/public/image/leftBox.png);float: left;}
+.leftWord {width: 160px;height: 180px;background: url(/app/web/templates/public/image/bottomBox.png);float: left;}
+.leftad {width: 150px; margin: 20px 0 0 20px;}
+.lefttime{width: 150px;margin: 20px 0 0 20px;}
+.titleL {font-size: 18px;color: #393226;margin: 35px 0 0 11px;}
+.wordL {margin: 10px 0 0 10px;}
+.tM span {color: #f58d4e;}
+.cM { width: 120px;}
+.Qme {width: 100px;height: 100px;position: absolute;top: 475px;left: 195px;}
+
+
+.bottom{width: 86%;height: 100px;margin: 0 auto;border-top: 2px dashed #856024;color:#af9162;clear: both;margin-top: 10px;}
+.bottom ul {margin:10px auto;width: 260px;}
+.bottom li {width: 65px;}
+.bottom li a {color: #af9162; }
+.bw {width:100%;margin:0 auto;text-align: center;}
+.bw a{color: red} 
+.news,.study,.speaks,.suibi {margin-bottom: 35px;}
+.flink{ width: 80%; margin:10px 0 0 100px;}
+.flink span{ margin-left: 5px;}
+.flink span a {color: #af9162}
+.flink span a:hover{ color: red;}
+
+
+.ad {width: 702px;height: 108px;background: url(/app/web/templates/public/image/topBox.png);line-height: 108px;float: left;margin-left: -30px;}
+
+#focus {width:670px; height:80px; overflow:hidden; position:relative;margin: 14px 0 0 16px;}
+#focus ul {height:80px; position:absolute;}
+#focus ul li {float:left; width:670px; height:80px; overflow:hidden; position:relative; background:#000;}
+#focus ul li div {position:absolute; overflow:hidden;}
+#focus .btnBg {position:absolute; width:670px; height:20px; left:0; bottom:0; background:#AEA8A8;}
+#focus .btn {position:absolute; width:650px; height:10px; padding:5px 35px; right:0; bottom:0; text-align:right;line-height: 10px;}
+#focus .btn span {display:inline-block; _display:inline; _zoom:1; width:25px; height:10px; _font-size:0; margin-left:5px; cursor:pointer; background:#fff;}
+#focus .btn span.on {background:#fff;}
+#focus .preNext {width:30px; height:80px; position:absolute; background:url(/app/web/templates/public/image/sprite.png) no-repeat 0 0; cursor:pointer;}
+#focus .pre {left:0;}
+#focus .next {right:0; background-position:right top;}
+
+
+.cbottom { width: 600px; float: left; margin:10px 0 10px 0;}

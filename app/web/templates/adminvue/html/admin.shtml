@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="shortcut icon" type="image/ico" href="/app/web/templates/public/image/favicon.ico">
+    <link rel="stylesheet" href="/app/web/templates/admin/css/admin.css" type="text/css">
+    <script type="text/javascript" src="/plugin/jquery/jquery-1.6.4.min.js"></script>
+    <script src="/plugin/vue/vue.min.js"></script>
+    <script src="/plugin/vue/axios.min.js"></script>
+    <script src="/app/web/templates/adminvue/component/header.js"></script>
+    <script src="/app/web/templates/adminvue/component/menu.js"></script>
+</head>
+
+<body>
+<div id="example" class="all">
+    <!-- 顶部 -->
+    <div class="top">
+        <my-header u-name="{$smarty.cookies.91lsme_uname}"
+                   u-time="{$smarty.now|date_format:'%Y-%m-%d %H:%M:%S'}"></my-header>
+    </div>
+    <!-- 内容 -->
+    <div class="content">
+        <!-- 左边菜单 -->
+        <div class="left">
+            <my-menu></my-menu>
+        </div>
+        <!-- 主要内容-->
+        <div class="main">
+
+        </div>
+    </div>
+    <div class="footer"> {include file="app/web/templates/admin/html/footer.shtml"}</div>
+</div>
+<script type="text/javascript">
+    //menu.tourl('/admin-status');
+    new Vue({
+        el: '#example',
+    })
+</script>
+</body>
+</html>

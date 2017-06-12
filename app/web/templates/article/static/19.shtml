@@ -1,0 +1,172 @@
+<!--  -->
+<!doctype html>
+<html>
+	<head>
+		<title>FusionCharts参数的详细说明和功能特性——就要听我说 91lsme.com</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="就要听我说,听我说,91lsme,listen me">
+		<meta name="description" content="就要听我说个人网站，分感知、觉醒、践行、随笔4大主题，内容充实丰富，思想充满创意，作品精益求精。">
+		<link rel="shortcut icon" type="image/ico" href="http://www.91lsme.com/app/web/templates/public/image/favicon.ico">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/public/css/css.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/article/css/article.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/plugin/editor/plugins/code/prettify.css" type="text/css">
+		<script type="text/javascript" src="http://www.91lsme.com/plugin/jquery/jquery-1.6.4.min.js"></script>
+	</head>
+
+	<body>
+		<div class="main"> 
+			<!-- 顶部 -->
+			<div class="top"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="logo"><a href="http://www.91lsme.com"><img src="http://www.91lsme.com/app/web/templates/public/image/logo.png"></a></div>
+<div class="Qme"><a href="tencent://message/?uin=286142784&Menu=yes"><img src="http://www.91lsme.com/app/web/templates/public/image/Qme.png"></a></div>
+ </div>
+			<!-- 导航 -->
+			<div class="nav"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul class="navMain">
+	<li><a href="http://www.91lsme.com/"><img src="http://www.91lsme.com/app/web/templates/public/image/nav1.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/1_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav2.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/2_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav3.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/3_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav4.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/4_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav5.png"/></a></li>
+	<li><a href="http://www.91lsme.com/article/14.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav6.png"/></a></li>
+</ul>
+ </div>
+			<div class="content"> 
+				<!-- 左边框 -->
+				<div class="left"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="leftImg"><img src="http://www.91lsme.com/app/web/templates/public/image/leftImg.png"></div>
+<div class="leftWord">
+	<div class="titleL"><img src="http://www.91lsme.com/app/web/templates/public/image/listen.png"></div>
+	<div class="wordL">
+		<div class="tM"><span>⊙</span> 前言阵地 </div>
+		<div class="cM" style="text-indent:2em"> 经过很长时间奋战，就要听我说个人网终于建成，还有很多不成熟和欠缺的地方 ，希望大家多多支持和提出好的建议！以后会做的更好 ……</div>
+	</div>   
+	<script type="text/javascript" src="/plugin/highcharts/highcharts.js"></script>  
+	<script type="text/javascript" src="/plugin/highcharts/highcharts-more.js"></script>
+	<script type="text/javascript" src="/plugin/highcharts/themes/grid.js"></script>
+	<script type="text/javascript" src="/app/web/templates/public/js/clock.js"></script>
+	<div class="lefttime" id="container_clock"></div>
+	<div class="leftad"></div>
+</div>
+ </div>
+				<div class="centerAndRight"> 
+					<!-- 空白框 -->
+					<div class="ad">  </div>
+					<div class="center">
+						<div class="title">
+							<div class="titleImg">
+								<img src="http://www.91lsme.com/app/web/templates/default/image/study.png"/>
+							</div>
+						</div>  
+						<div class="articleTitle">FusionCharts参数的详细说明和功能特性</div>
+						<div class="time">2014-12-19</div>
+						<div class="line_1"></div>
+						<div class="articleMain">功能特性<br />
+animation &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;是否动画显示数据，默认为1(True)<br />
+showNames &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;是否显示横向坐标轴(x轴)标签名称<br />
+rotateNames &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;是否旋转显示标签，默认为0(False):横向显示<br />
+showValues &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;是否在图表显示对应的数据值，默认为1(True)<br />
+yAxisMinValue &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;指定纵轴(y轴)最小值，数字<br />
+yAxisMaxValue &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 指定纵轴(y轴)最小值，数字<br />
+showLimits &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;是否显示图表限值(y轴最大、最小值)，默认为1(True)<br />
+<br />
+图表标题和轴名称<br />
+caption &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;图表主标题<br />
+subCaption &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;图表副标题<br />
+xAxisName &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;横向坐标轴(x轴)名称<br />
+yAxisName &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;纵向坐标轴(y轴)名称<br />
+<br />
+图表和画布的样式<br />
+bgColor &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;图表背景色，6位16进制颜色值<br />
+canvasBgColor &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;画布背景色，6位16进制颜色值<br />
+canvasBgAlpha &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;画布透明度，[0-100]<br />
+canvasBorderColor &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;画布边框颜色，6位16进制颜色值<br />
+canvasBorderThickness &nbsp; &nbsp; &nbsp; &nbsp;画布边框厚度，[0-100]<br />
+shadowAlpha &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;投影透明度，[0-100]<br />
+showLegend &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;是否显示系列名，默认为1(True)<br />
+<br />
+字体属性<br />
+baseFont &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;图表字体样式<br />
+baseFontSize &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;图表字体大小<br />
+baseFontColor &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;图表字体颜色，6位16进制颜色值<br />
+outCnvBaseFont &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;图表画布以外的字体样式<br />
+outCnvBaseFontSize &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;图表画布以外的字体大小<br />
+outCnvBaseFontColor &nbsp; &nbsp; &nbsp; &nbsp;图表画布以外的字体颜色，6位16进制颜色值<br />
+<br />
+分区线和网格<br />
+numDivLines &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;画布内部水平分区线条数，数字<br />
+divLineColor &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;水平分区线颜色，6位16进制颜色值<br />
+divLineThickness &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;水平分区线厚度，[1-5]<br />
+divLineAlpha &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;水平分区线透明度，[0-100]<br />
+showAlternateHGridColor &nbsp; &nbsp;是否在横向网格带交替的颜色，默认为0(False)<br />
+alternateHGridColor &nbsp; &nbsp; &nbsp; &nbsp;横向网格带交替的颜色，6位16进制颜色值<br />
+alternateHGridAlpha &nbsp; &nbsp; &nbsp; &nbsp;横向网格带的透明度，[0-100]<br />
+showDivLinues &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;是否显示Div行的值，默认？？<br />
+numVDivLines &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;画布内部垂直分区线条数，数字<br />
+vDivLineColor &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;垂直分区线颜色，6位16进制颜色值<br />
+vDivLineThickness &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;垂直分区线厚度，[1-5]<br />
+vDivLineAlpha &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;垂直分区线透明度，[0-100]<br />
+showAlternateVGridColor &nbsp; &nbsp;是否在纵向网格带交替的颜色，默认为0(False)<br />
+alternateVGridColor &nbsp; &nbsp; &nbsp; &nbsp;纵向网格带交替的颜色，6位16进制颜色值<br />
+alternateVGridAlpha &nbsp; &nbsp; &nbsp; &nbsp;纵向网格带的透明度，[0-100]<br />
+<br />
+数字格式<br />
+numberPrefix &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;增加数字前缀<br />
+numberSuffix &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;增加数字后缀 &nbsp; &nbsp;% 为 \'%25\'<br />
+formatNumberScale &nbsp; &nbsp; &nbsp; &nbsp;是否格式化数字,默认为1(True),自动的给你的数字加上K（千）或M（百万）；若取0,则不加K或M<br />
+decimalPrecision &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;指定小数位的位数，[0-10] &nbsp; &nbsp;例如：=\'0\' 取整<br />
+divLineDecimalPrecision &nbsp; &nbsp;指定水平分区线的值小数位的位数，[0-10]<br />
+limitsDecimalPrecision &nbsp; &nbsp; &nbsp; &nbsp;指定y轴最大、最小值的小数位的位数，[0-10]<br />
+formatNumber &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;逗号来分隔数字(千位，百万位),默认为1(True)；若取0,则不加分隔符<br />
+decimalSeparator &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;指定小数分隔符,默认为\'.\'<br />
+thousandSeparator &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;指定千分位分隔符,默认为\',\'<br />
+<br />
+Tool-tip/Hover标题<br />
+showhovercap &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;是否显示悬停说明框，默认为1(True)<br />
+hoverCapBgColor &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;悬停说明框背景色，6位16进制颜色值<br />
+hoverCapBorderColor &nbsp; &nbsp; &nbsp; &nbsp;悬停说明框边框颜色，6位16进制颜色值<br />
+hoverCapSepChar &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;指定悬停说明框内值与值之间分隔符,默认为\',\'<br />
+<br />
+折线图的参数<br />
+lineThickness &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;折线的厚度<br />
+anchorRadius &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;折线节点半径，数字<br />
+anchorBgAlpha &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;折线节点透明度，[0-100]<br />
+anchorBgColor &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;折线节点填充颜色，6位16进制颜色值<br />
+anchorBorderColor &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;折线节点边框颜色，6位16进制颜色值<br />
+<br />
+Set标签使用的参数<br />
+value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;数据值<br />
+color &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;颜色<br />
+link &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;链接（本窗口打开[Url]，新窗口打开[n-Url]，调用JS函数[JavaScript:函数]）<br />
+name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;横向坐标轴标签名称<br /></div> 
+						<div class="articlelink">相关链接：<a href="http://hi.baidu.com/tylergong/item/8eef643030cabf25b2c0c571" target="_blank">http://hi.baidu.com/tylergong/item/8eef643030cabf25b2c0c571</a></div> 
+						<div class="articlefooter">亲们~！有事就点“<a href="tencent://message/?uin=286142784&Menu=yes">就Q我</a>"，多支持和提出好的建议！以后会做的更好 ……</div>
+						<div class="articleother">
+							<div>上一篇：<a href="http://www.91lsme.com/article/21.shtml">求两段时间的交集（一个判断搞定，原创）</a></div>
+							<div>下一篇：<a href="http://www.91lsme.com/article/17.shtml">mysql_errno 返回错误对应表</a></div>
+						</div>
+					</div>
+					<div class="cbottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ </div>
+				</div>
+			</div>
+			<!-- 低部 -->
+			<div class="bottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul>
+	<li><a href="http://www.91lsme.com">版权信息</a></li>
+	<li><a href="http://www.91lsme.com">建站说明</a></li>
+	<li><a href="http://www.91lsme.com">设为首页</a></li>
+	<li><a href="http://www.91lsme.com">加入收藏</a></li>
+</ul> 
+<br/><br/>
+<div class="bw">Copyright © 2014-2015 tylergong <a href="http://www.91lsme.com" target="_blank">www.91lsme.com</a> All rights reserved. <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备 14059724号</a></div> 
+<div style="display: none;">
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4e12425c4f2ca16acaab6b2a8cdc8fbc' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</div>
+ </div>
+		</div>
+	</body>
+</html>

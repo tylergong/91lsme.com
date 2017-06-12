@@ -1,0 +1,137 @@
+<!--  -->
+<!doctype html>
+<html>
+	<head>
+		<title>MySQL数据库中与 NULL值有关的几个问题——就要听我说 91lsme.com</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="就要听我说,听我说,91lsme,listen me">
+		<meta name="description" content="就要听我说个人网站，分感知、觉醒、践行、随笔4大主题，内容充实丰富，思想充满创意，作品精益求精。">
+		<link rel="shortcut icon" type="image/ico" href="http://www.91lsme.com/app/web/templates/public/image/favicon.ico">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/public/css/css.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/article/css/article.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/plugin/editor/plugins/code/prettify.css" type="text/css">
+		<script type="text/javascript" src="http://www.91lsme.com/plugin/jquery/jquery-1.6.4.min.js"></script>
+	</head>
+
+	<body>
+		<div class="main"> 
+			<!-- 顶部 -->
+			<div class="top"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="logo"><a href="http://www.91lsme.com"><img src="http://www.91lsme.com/app/web/templates/public/image/logo.png"></a></div>
+<div class="Qme"><a href="tencent://message/?uin=286142784&Menu=yes"><img src="http://www.91lsme.com/app/web/templates/public/image/Qme.png"></a></div>
+ </div>
+			<!-- 导航 -->
+			<div class="nav"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul class="navMain">
+	<li><a href="http://www.91lsme.com/"><img src="http://www.91lsme.com/app/web/templates/public/image/nav1.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/1_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav2.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/2_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav3.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/3_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav4.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/4_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav5.png"/></a></li>
+	<li><a href="http://www.91lsme.com/article/14.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav6.png"/></a></li>
+</ul>
+ </div>
+			<div class="content"> 
+				<!-- 左边框 -->
+				<div class="left"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="leftImg"><img src="http://www.91lsme.com/app/web/templates/public/image/leftImg.png"></div>
+<div class="leftWord">
+	<div class="titleL"><img src="http://www.91lsme.com/app/web/templates/public/image/listen.png"></div>
+	<div class="wordL">
+		<div class="tM"><span>⊙</span> 前言阵地 </div>
+		<div class="cM" style="text-indent:2em"> 经过很长时间奋战，就要听我说个人网终于建成，还有很多不成熟和欠缺的地方 ，希望大家多多支持和提出好的建议！以后会做的更好 ……</div>
+	</div>   
+	<script type="text/javascript" src="/plugin/highcharts/highcharts.js"></script>  
+	<script type="text/javascript" src="/plugin/highcharts/highcharts-more.js"></script>
+	<script type="text/javascript" src="/plugin/highcharts/themes/grid.js"></script>
+	<script type="text/javascript" src="/app/web/templates/public/js/clock.js"></script>
+	<div class="lefttime" id="container_clock"></div>
+	<div class="leftad"></div>
+</div>
+ </div>
+				<div class="centerAndRight"> 
+					<!-- 空白框 -->
+					<div class="ad">  </div>
+					<div class="center">
+						<div class="title">
+							<div class="titleImg">
+								<img src="http://www.91lsme.com/app/web/templates/default/image/study.png"/>
+							</div>
+						</div>  
+						<div class="articleTitle">MySQL数据库中与 NULL值有关的几个问题</div>
+						<div class="time">2015-01-04</div>
+						<div class="line_1"></div>
+						<div class="articleMain">&nbsp;&nbsp;&nbsp;&nbsp;对于SQL的新手，NULL值的概念常常会造成混淆，他们常认为NULL是与空字符串\'\'相同的事。情况并非如此。例如，下述语句是完全不同的：<br />
+<pre class=\"prettyprint lang-js\">mysql&gt; INSERT INTO my_table (phone) VALUES (NULL);
+mysql&gt; INSERT INTO my_table (phone) VALUES (\'\');</pre>
+<p>
+	这两条语句均会将值插入phone（电话）列，
+</p>
+<p>
+	但第1条语句插入的是NULL值，第2条语句插入的是空字符串。
+</p>
+<p>
+	第1种情况的含义可被解释为“电话号码未知”，而第2种情况的含义可被解释为“该人员没有电话，因此没有电话号码”。
+</p>
+为了进行NULL处理，可使用IS NULL和IS NOT NULL操作符以及IFNULL()函数。<br />
+<p>
+	在SQL中，NULL值与任何其它值的比较（即使是NULL）永远不会为“真”。包含NULL的表达式总是会导出NULL值，除非在关于操作符的文档中以及表达式的函数中作了其他规定。
+</p>
+<p>
+	下述示例中的所有列均返回NULL：
+</p>
+<pre class=\"prettyprint lang-js\">mysql&gt; SELECT NULL, 1+NULL, CONCAT(\'Invisible\',NULL);</pre>
+<p>
+	如果打算搜索列值为NULL的列，不能使用expr = NULL测试。
+</p>
+<p>
+	下述语句不返回任何行，这是因为，对于任何表达式，expr = NULL永远不为“真”：
+</p>
+<pre class=\"prettyprint lang-js\">mysql&gt; SELECT * FROM my_table WHERE phone = NULL;</pre>
+<p>
+	要想查找NULL值，必须使用IS NULL测试。
+</p>
+<p>
+	在下面的语句中，介绍了查找NULL电话号码和空电话号码的方式：
+</p>
+<pre class=\"prettyprint lang-js\">mysql&gt; SELECT * FROM my_table WHERE phone IS NULL;
+mysql&gt; SELECT * FROM my_table WHERE phone = \'\';</pre>
+更多信息和示例：<br />
+如果你正在使用MyISAM、InnoDB、BDB、或MEMORY存储引擎，能够在可能具有NULL值的列上增加1条索引。如不然，必须声明索引列为NOT NULL，而且不能将NULL插入到列中。<br />
+用LOAD DATA INFILE读取数据时，对于空的或丢失的列，将用\'\'更新它们。如果希望在列中具有NULL值，应在数据文件中使用\\N。在某些情况下，也可以使用文字性单词“NULL”。<br />
+使用DISTINCT、GROUP BY或ORDER BY时，所有NULL值将被视为等同的。<br />
+使用ORDER BY时，首先将显示NULL值，如果指定了DESC按降序排列，NULL值将最后显示。<br />
+对于聚合（累计）函数，如COUNT()、MIN()和SUM()，将忽略NULL值。对此的例外是COUNT(*)，它将计数行而不是单独的列值。例如，下述语句产生两个计数。首先计数表中的行数，其次计数age列中的非NULL值数目：<br />
+<pre class=\"prettyprint lang-js\">mysql&gt; SELECT COUNT(*), COUNT(age) FROM person;</pre>
+对于某些列类型，MySQL将对NULL值进行特殊处理。如果将NULL插入TIMESTAMP列，将插入当前日期和时间。如果将NULL插入具有AUTO_INCREMENT属性的整数列，将插入序列中的下一个编号。<br /></div> 
+						<div class="articlelink">相关链接：<a href="http://hi.baidu.com/tylergong/item/7e9cb0f87e158f1ce2e3bd4a" target="_blank">http://hi.baidu.com/tylergong/item/7e9cb0f87e158f1ce2e3bd4a</a></div> 
+						<div class="articlefooter">亲们~！有事就点“<a href="tencent://message/?uin=286142784&Menu=yes">就Q我</a>"，多支持和提出好的建议！以后会做的更好 ……</div>
+						<div class="articleother">
+							<div>上一篇：没有了</div>
+							<div>下一篇：<a href="http://www.91lsme.com/article/58.shtml">PHP :time(),date(),mktime()区别</a></div>
+						</div>
+					</div>
+					<div class="cbottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ </div>
+				</div>
+			</div>
+			<!-- 低部 -->
+			<div class="bottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul>
+	<li><a href="http://www.91lsme.com">版权信息</a></li>
+	<li><a href="http://www.91lsme.com">建站说明</a></li>
+	<li><a href="http://www.91lsme.com">设为首页</a></li>
+	<li><a href="http://www.91lsme.com">加入收藏</a></li>
+</ul> 
+<br/><br/>
+<div class="bw">Copyright © 2014-2015 tylergong <a href="http://www.91lsme.com" target="_blank">www.91lsme.com</a> All rights reserved. <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备 14059724号</a></div> 
+<div style="display: none;">
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4e12425c4f2ca16acaab6b2a8cdc8fbc' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</div>
+ </div>
+		</div>
+	</body>
+</html>

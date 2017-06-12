@@ -1,0 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+<script type="text/javascript" src="/plugin/highcharts/highcharts.js"></script>
+<script type="text/javascript" src="/plugin/highcharts/modules/exporting.js"></script>
+<script type="text/javascript" src="/plugin/highcharts/themes/grid.js"></script>

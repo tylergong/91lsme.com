@@ -1,0 +1,156 @@
+<!--  -->
+<!doctype html>
+<html>
+	<head>
+		<title>mysql_errno 返回错误对应表——就要听我说 91lsme.com</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="就要听我说,听我说,91lsme,listen me">
+		<meta name="description" content="就要听我说个人网站，分感知、觉醒、践行、随笔4大主题，内容充实丰富，思想充满创意，作品精益求精。">
+		<link rel="shortcut icon" type="image/ico" href="http://www.91lsme.com/app/web/templates/public/image/favicon.ico">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/public/css/css.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/article/css/article.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/plugin/editor/plugins/code/prettify.css" type="text/css">
+		<script type="text/javascript" src="http://www.91lsme.com/plugin/jquery/jquery-1.6.4.min.js"></script>
+	</head>
+
+	<body>
+		<div class="main"> 
+			<!-- 顶部 -->
+			<div class="top"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="logo"><a href="http://www.91lsme.com"><img src="http://www.91lsme.com/app/web/templates/public/image/logo.png"></a></div>
+<div class="Qme"><a href="tencent://message/?uin=286142784&Menu=yes"><img src="http://www.91lsme.com/app/web/templates/public/image/Qme.png"></a></div>
+ </div>
+			<!-- 导航 -->
+			<div class="nav"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul class="navMain">
+	<li><a href="http://www.91lsme.com/"><img src="http://www.91lsme.com/app/web/templates/public/image/nav1.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/1_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav2.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/2_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav3.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/3_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav4.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/4_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav5.png"/></a></li>
+	<li><a href="http://www.91lsme.com/article/14.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav6.png"/></a></li>
+</ul>
+ </div>
+			<div class="content"> 
+				<!-- 左边框 -->
+				<div class="left"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="leftImg"><img src="http://www.91lsme.com/app/web/templates/public/image/leftImg.png"></div>
+<div class="leftWord">
+	<div class="titleL"><img src="http://www.91lsme.com/app/web/templates/public/image/listen.png"></div>
+	<div class="wordL">
+		<div class="tM"><span>⊙</span> 前言阵地 </div>
+		<div class="cM" style="text-indent:2em"> 经过很长时间奋战，就要听我说个人网终于建成，还有很多不成熟和欠缺的地方 ，希望大家多多支持和提出好的建议！以后会做的更好 ……</div>
+	</div>   
+	<script type="text/javascript" src="/plugin/highcharts/highcharts.js"></script>  
+	<script type="text/javascript" src="/plugin/highcharts/highcharts-more.js"></script>
+	<script type="text/javascript" src="/plugin/highcharts/themes/grid.js"></script>
+	<script type="text/javascript" src="/app/web/templates/public/js/clock.js"></script>
+	<div class="lefttime" id="container_clock"></div>
+	<div class="leftad"></div>
+</div>
+ </div>
+				<div class="centerAndRight"> 
+					<!-- 空白框 -->
+					<div class="ad">  </div>
+					<div class="center">
+						<div class="title">
+							<div class="titleImg">
+								<img src="http://www.91lsme.com/app/web/templates/default/image/study.png"/>
+							</div>
+						</div>  
+						<div class="articleTitle">mysql_errno 返回错误对应表</div>
+						<div class="time">2014-12-19</div>
+						<div class="line_1"></div>
+						<div class="articleMain"><pre class="prettyprint lang-php">&lt;?php
+　　mysql_connect(\"marliesle\");
+　　echo mysql_errno().\": \".mysql_error().\"\";
+　　mysql_select_db(\"nonexistentdb\");
+　　echo mysql_errno().\": \".mysql_error().\"\";
+　　$conn = mysql_query(\"SELECT * FROM nonexistenttable\");
+　　echo mysql_errno().\": \".mysql_error().\"\";
+?&gt;
+</pre>
+<p>
+	错误代码解释<br/>
+ 1005: 创建表失败<br/>
+ 1006: 创建数据库失败<br/>
+ 1007: 数据库已存在，创建数据库失败<br/>
+ 1008: 数据库不存在，删除数据库失败<br/>
+ 1009: 不能删除数据库文件导致删除数据库失败<br/>
+ 1010: 不能删除数据目录导致删除数据库失败<br/>
+ 1011: 删除数据库文件失败<br/>
+ 1012: 不能读取系统表中的记录<br/>
+ 1016: 无法打开文件<br/>
+ 1020:记录已被其他用户修改<br/>
+ 1021:硬盘剩余空间不足，请加大硬盘可用空间<br/>
+ 1022:关键字重复，更改记录失败<br/>
+ 1023:关闭时发生错误<br/>
+ 1024:读文件错误<br/>
+ 1025:更改名字时发生错误<br/>
+ 1026:写文件错误<br/>
+ 1032:记录不存在<br/>
+ 1036:数据表是只读的，不能对它进行修改<br/>
+ 1037:系统内存不足，请重启数据库或重启服务器<br/>
+ 1038:用于排序的内存不足，请增大排序缓冲区<br/>
+ 1040:已到达数据库的最大连接数，请加大数据库可用连接数<br/>
+ 1041:系统内存不足<br/>
+ 1042:无效的主机名<br/>
+ 1043:无效连接<br/>
+ 1044:当前用户没有访问数据库的权限<br/>
+ 1045:不能连接数据库，用户名或密码错误<br/>
+ 1040: 最大连接数<br/>
+ 1048:字段不能为空<br/>
+ 1049:数据库不存在<br/>
+ 1050:数据表已存在<br/>
+ 1051:数据表不存在<br/>
+ 1054:字段不存在<br/>
+ 1065:无效的SQL语句，SQL语句为空<br/>
+ 1081:不能建立Socket连接<br/>
+ 1114:数据表已满，不能容纳任何记录<br/>
+ 1116:打开的数据表太多<br/>
+ 1129:数据库出现异常，请重启数据库<br/>
+ 1130:连接数据库失败，没有连接数据库的权限<br/>
+ 1133:数据库用户不存在<br/>
+ 1141:当前用户无权访问数据库<br/>
+ 1142:当前用户无权访问数据表<br/>
+ 1143:当前用户无权访问数据表中的字段<br/>
+ 1146:数据表不存在<br/>
+ 1147:未定义用户对数据表的访问权限<br/>
+ 1149:SQL语句语法错误<br/>
+ 1158:网络错误，出现读错误，请检查网络连接状况<br/>
+ 1159:网络错误，读超时，请检查网络连接状况<br/>
+ 1160:网络错误，出现写错误，请检查网络连接状况<br/>
+ 1161:网络错误，写超时，请检查网络连接状况<br/>
+ 1062:字段值重复，入库失败<br/>
+</p></div> 
+						<div class="articlelink">相关链接：<a href="http://hi.baidu.com/tylergong/item/a156f3d4bee839ca1972b496" target="_blank">http://hi.baidu.com/tylergong/item/a156f3d4bee839ca1972b496</a></div> 
+						<div class="articlefooter">亲们~！有事就点“<a href="tencent://message/?uin=286142784&Menu=yes">就Q我</a>"，多支持和提出好的建议！以后会做的更好 ……</div>
+						<div class="articleother">
+							<div>上一篇：<a href="http://www.91lsme.com/article/19.shtml">FusionCharts参数的详细说明和功能特性</a></div>
+							<div>下一篇：<a href="http://www.91lsme.com/article/16.shtml">PHP获取星期的方法及代码</a></div>
+						</div>
+					</div>
+					<div class="cbottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ </div>
+				</div>
+			</div>
+			<!-- 低部 -->
+			<div class="bottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul>
+	<li><a href="http://www.91lsme.com">版权信息</a></li>
+	<li><a href="http://www.91lsme.com">建站说明</a></li>
+	<li><a href="http://www.91lsme.com">设为首页</a></li>
+	<li><a href="http://www.91lsme.com">加入收藏</a></li>
+</ul> 
+<br/><br/>
+<div class="bw">Copyright © 2014-2015 tylergong <a href="http://www.91lsme.com" target="_blank">www.91lsme.com</a> All rights reserved. <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备 14059724号</a></div> 
+<div style="display: none;">
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4e12425c4f2ca16acaab6b2a8cdc8fbc' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</div>
+ </div>
+		</div>
+	</body>
+</html>

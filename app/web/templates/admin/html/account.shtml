@@ -1,0 +1,63 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 标题 -->
+<div class="title">
+	<div class="icon manager"></div><div class="word">账号管理</div>
+	<div class="bank" onclick="menu.tourl('/admin-accountlist')">返回账号列表</div>
+</div>
+<!-- 详细内容 -->
+<div class="detail">
+	<table border="1" class="table2">
+		<tr>
+			<td class="titleTd">ID：</td>
+			<td class="mainTd">{$account.id}<input type="hidden" name="id" id="id" value="{$account.id}"></td>
+		</tr>
+		<tr>
+			<td class="titleTd">管理员账号：</td>
+			<td class="mainTd"><input type="text" value="{$account.uname}" id="uname" name="uname" /></td>
+		</tr>
+		<tr>
+			<td class="titleTd">密码：</td>
+			<td class="mainTd"><input type="text" id="upwd" name="upwd" /><span style="color: red;"> (注：不改密码请留空)</span></td>
+		</tr>
+		<tr>
+			<td class="titleTd">是否起效：</td>
+			<td class="mainTd">
+				<label><input type="radio" name="is_show" id="is_show" value="1" {if $account.is_show eq 1}checked="checked"{/if} />是</label>
+				<label><input type="radio" name="is_show" id="is_show" value="0" {if $account.is_show eq 0}checked="checked"{/if}/>否 </label></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="hidden" name="type" id="type" value="{$type}">
+				<div id="submit" class="icon"></div> 
+			</td>
+		</tr>
+	</table>
+</div>
+<script type="text/javascript">
+	$('#submit').click(function() {
+		if ($.trim($("#upwd").val()).length > 0) {
+			var statu = confirm("你确认要修改账号 " + $('#uname').val() + " 的密码吗?");
+			if (!statu) {
+				return false;
+			}
+		}
+		var data = 'id=' + $('#id').val() +
+				'&uname=' + $('#uname').val() +
+				'&upwd=' + $('#upwd').val() +
+				'&is_show=' + $('input[name="is_show"]:checked').val() +
+				"&_r=" + Math.random();
+		$.ajax({
+			type: "POST",
+			url: '/admin-accountedit',
+			data: data,
+			dataType: "json",
+			success: function(data) {
+				if (data > 0) {
+					menu.tourl('/admin-accountlist');
+				} else {
+					alert('对不起，修改失败或暂无权限！！！');
+				}
+			}
+		})
+	});
+</script>

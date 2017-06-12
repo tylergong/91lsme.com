@@ -1,0 +1,15 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div id="focus">
+	<ul>
+		<!-- {section name=ad loop=$list_ad} -->
+		<li>
+			<!-- {if $list_ad[ad].is_link eq 1} -->
+			<a href="{$list_ad[ad].jumpurl}" target="_blank" title="{$list_ad[ad].title}"><img src="{#cdn_url#}/{$list_ad[ad].imgurl}"/></a>
+			<!-- {else} -->
+			<img src="{#cdn_url#}/{$list_ad[ad].imgurl}" width="760" height="80"/>
+			<!-- {/if} -->
+		</li>
+		<!-- {/section} -->
+	</ul>
+</div>
+<script type="text/javascript" src="{#cdn_url#}/app/web/templates/public/js/ad.js"></script> 

@@ -1,0 +1,14 @@
+* {margin:0px;padding: 0px;}
+body {background-color: #257abb;font-family: '微软雅黑';}
+input {border: none;}
+.loginBox {position: absolute;top: 50%;left: 50%;width: 568px;height: 380px;margin: -284px 0 0 -250px;background: url(/app/web/templates/admin/image/loginBox.png);}
+.content {width: 310px;height: 175px;float: right;margin: 112px 24px 0 0;display: inline;text-align: center;} 
+.content input {border: 1px solid #84b3d6;margin-top: 15px;width: 185px;height: 24px;line-height: 24px;}
+#username,#password {background: url(/app/web/templates/admin/image/little.png) no-repeat 0 0;padding-left: 19px;width: 167px;}
+#password {background-position: 0 -24px;}
+#code {width: 60px;}
+#inputCode {width: 95px;margin-left: 15px;}
+#loginBtn {width: 58px;height: 21px;border: none;}
+.btn {float: right;margin-right: 36px;display: inline;}
+.btnBottom {margin-top: -6px;}
+.warn {color: red;margin-top: 10px;}

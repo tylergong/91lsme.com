@@ -1,0 +1,57 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 标题 -->
+<div class="title">
+	<div class="icon manager"></div><div class="word">频道管理</div>
+	<div class="bank" onclick="menu.tourl('/admin-channellist')">返回频道列表</div>
+</div>
+<!-- 详细内容 -->
+<div class="detail">
+	<table border="1" class="table2">
+		<tr>
+			<td class="titleTd">频道ID：</td>
+			<td class="mainTd">{$channel.id}<input type="hidden" name="cid" id="cid" value="{$channel.id}"></td>
+		</tr>
+		<tr>
+			<td class="titleTd">频道名称：</td>
+			<td class="mainTd"><input type="text" value="{$channel.cname}" id="cname" name="cname" /></td>
+		</tr>
+		<tr>
+			<td class="titleTd">频道名称：</td>
+			<td class="mainTd">
+				<label><input type="radio" name="is_show" id="is_show" value="1" {if $channel.is_show eq 1}checked="checked"{/if} />是</label>
+				<label><input type="radio" name="is_show" id="is_show" value="0" {if $channel.is_show eq 0}checked="checked"{/if}/>否 </label></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="hidden" name="type" id="type" value="{$type}">
+				<div id="submit" class="icon"></div> 
+			</td>
+		</tr>
+	</table>
+</div>
+<script type="text/javascript">
+	$('#submit').click(function() {
+		var _type = $('#type').val();
+		var data = 'cid=' + $('#cid').val() +
+				'&cname=' + $('#cname').val() +
+				'&is_show=' + $('input[name="is_show"]:checked').val() +
+				"&_r=" + Math.random();
+		$.ajax({
+			type: "POST",
+			url: '/admin-channeledit',
+			data: data,
+			dataType: "json",
+			success: function(data) {
+				if (data) {
+					alert('操作成功');
+					if (_type == 'add') {
+						_type = 'edit';
+					}
+					menu.tourl('/admin-channel?type=' + _type + '&id=' + data);
+				} else {
+					alert('操作失败');
+				}
+			}
+		})
+	});
+</script>

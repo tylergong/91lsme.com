@@ -1,0 +1,59 @@
+<!-- {config_load file="smarty.conf"} -->
+<!doctype html>
+<html>
+	<head>
+		<title>{#web_title#}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="{#web_keywords#}">
+		<meta name="description" content="{#web_description#}">
+		<link rel="shortcut icon" type="image/ico" href="{#cdn_url#}/app/web/templates/public/image/favicon.ico">
+		<link rel="stylesheet" href="{#cdn_url#}/app/web/templates/public/css/css.css" type="text/css">
+		<link rel="stylesheet" href="{#cdn_url#}/app/web/templates/articlelist/css/articlelist.css" type="text/css">
+		<script type="text/javascript" src="{#cdn_url#}/plugin/jquery/jquery-1.6.4.min.js"></script>
+	</head>
+
+	<body>
+		<div class="main"> 
+			<!-- 顶部 -->
+			<div class="top"> {include file="app/web/templates/public/html/header.shtml"} </div>
+			<!-- 导航 -->
+			<div class="nav"> {include file="app/web/templates/public/html/nav.shtml"} </div>
+			<div class="content"> 
+				<!-- 左边框 -->
+				<div class="left"> {include file="app/web/templates/public/html/left.shtml"} </div>
+				<div class="centerAndRight"> 
+					<!-- 空白框 -->
+					<div class="ad">  </div>
+					<div class="center">
+						<div class="title">
+							<div class="titleImg">
+								<img src="{#cdn_url#}/app/web/templates/default/image/{if $type eq 1}news.png{else if $type eq 2}study.png{else if $type eq 3}speaks.png{else}life.png{/if}"/>
+							</div>
+						</div> 
+						<div class="line_1"></div> 
+						<div class="listMain">
+							<ul>
+								<! -- {section name=l loop=$list} -->
+								<li class="{if $list[l].up eq 1}listup{/if}">
+									<span>◎</span>
+									{if $list[l].up eq 1}<img src="{#cdn_url#}/app/web/templates/public/image/pin_3.gif" />{/if}
+									<! -- {if $is_static} -->
+									<a href="{if $list[l].is_link eq 1}{$list[l].jumpurl}{else}{#web_url#}/article/{$list[l].id}.shtml{/if}" target="{if $list[l].is_link eq 1}_blank{/if}"> {$list[l].title} </a>
+									<! -- {else} -->
+									<a href="{if $list[l].is_link eq 1}{$list[l].jumpurl}{else}{#web_url#}/article?id={$list[l].id}{/if}" target="{if $list[l].is_link eq 1}_blank{/if}"> {$list[l].title} </a>
+									<! -- {/if} -->
+									<span class="ctime"> {$list[l].create_time|date_format:'%Y-%m-%d'} </span>
+								</li>
+								<! -- {/section} -->
+							</ul>
+						</div> 
+					</div>
+					<div class="listpage">{$pageview}</div> 
+					<div class="cbottom"> {include file="app/web/templates/public/html/bottom_ad.shtml"} </div>
+				</div>
+			</div>
+			<!-- 低部 -->
+			<div class="bottom"> {include file="app/web/templates/public/html/footer.shtml"} </div>
+		</div>
+	</body>
+</html>

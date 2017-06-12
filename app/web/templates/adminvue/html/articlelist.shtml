@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue测试文章列表</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="shortcut icon" type="image/ico" href="/app/web/templates/public/image/favicon.ico">
+    <script src="/plugin/vue/vue.min.js"></script>
+    <script src="/plugin/vue/axios.min.js"></script>
+    <link href="/app/web/templates/articlelist/static/vuetest.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="article-list" class="page-bar">
+    <h1 style="text-align: center;margin: 0 auto;">文章列表</h1>
+    <table v-if="lists.length">
+        <tr>
+            <th></th>
+            <th>文章ID</th>
+            <th>文章标题</th>
+            <th>显示</th>
+            <th>超链</th>
+            <th>所属频道</th>
+            <th>添加时间</th>
+            <th>操作</th>
+        </tr>
+        <tr v-for="list in lists">
+            <td><input type="checkbox" :value="list.id" v-model="list.proCheck" @click="selecedPro(list)"></td>
+
+            <td v-if="list.up == 1"><img :src="'/app/web/templates/public/image/pin_3.gif'">{{ list.id }}</td>
+            <td v-else>{{ list.id }}</td>
+
+            <td v-if="list.is_link == 0"><a :href="'/article?id='+list.id" target="_blank">{{ list.title }}</a></td>
+            <td v-else><a :href="list.jumpurl" target="_blank">{{ list.title }}</a></td>
+
+            <td v-if="list.is_show == 0"><span style="color:red">否</span></td>
+            <td v-else>是</td>
+
+            <td v-if="list.is_link == 0">否</td>
+            <td v-else>是</td>
+
+            <td>{{ list.cid | cname }}</td>
+
+            <td>{{ list.create_time }}</td>
+
+            <td><a href="javascript:;" @click="tourl(list.id)">编辑</a></td>
+
+            <td><a href="javascript:;" @click="delOnce(list)">删除</a></td>
+        </tr>
+    </table>
+    <div v-if="lists.length">
+        <div>
+            <a href="javascript:;" @click="selectedAll">{{ selectedAllText }}</a>
+            <a v-if="!cklists.length" href="javascript:;" class="banclick">删除</a>
+            <a v-else href="javascript:;" @click="delMulti">删除</a>
+        </div>
+        <ul>
+            <li v-if="cur>1"><a @click="cur--,pageClick()">上一页</a></li>
+            <li v-if="cur==1"><a class="banclick">上一页</a></li>
+
+            <li v-for="index in indexs" :class="{ 'active': cur == index}">
+                <a @click="btnClick(index)">{{ index }}</a>
+            </li>
+
+            <li v-if="cur!=all"><a @click="cur++,pageClick()">下一页</a></li>
+            <li v-if="cur==all"><a class="banclick">下一页</a></li>
+
+            <li><a>共<i>{{all}}</i>页</a></li>
+        </ul>
+    </div>
+    <div v-else>
+        <p style="text-align: center;margin: 0 auto;padding-top: 20px;">暂无数据</p>
+    </div>
+
+    <div class="md-modal modal-msg md-modal-transition" :class="{'md-show':isshow}" id="showModal">
+        <div class="md-modal-inner">
+            <div class="md-top">
+                <button class="md-close" @click="closePop(false)">关闭</button>
+            </div>
+            <div class="md-content">
+                <div class="confirm-tips">
+                    <p id="cusLanInfo">你确认删除此信息吗?</p>
+                </div>
+                <div class="btn-wrap col-2">
+                    <button class="btn btn--m" id="btnModalConfirm" @click="closePop(true)">Yes</button>
+                    <button class="btn btn--m btn--red" id="btnModalCancel" @click="closePop(false)">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div :class="{'md-overlay':isshow}" id="showOverLay"></div>
+</div>
+<script src="/app/web/templates/articlelist/static/vuetest.js"></script>
+</body>
+</html>

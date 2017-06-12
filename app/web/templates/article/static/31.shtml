@@ -1,0 +1,138 @@
+<!--  -->
+<!doctype html>
+<html>
+	<head>
+		<title>魔方强悍公式——就要听我说 91lsme.com</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="就要听我说,听我说,91lsme,listen me">
+		<meta name="description" content="就要听我说个人网站，分感知、觉醒、践行、随笔4大主题，内容充实丰富，思想充满创意，作品精益求精。">
+		<link rel="shortcut icon" type="image/ico" href="http://www.91lsme.com/app/web/templates/public/image/favicon.ico">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/public/css/css.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/app/web/templates/article/css/article.css" type="text/css">
+		<link rel="stylesheet" href="http://www.91lsme.com/plugin/editor/plugins/code/prettify.css" type="text/css">
+		<script type="text/javascript" src="http://www.91lsme.com/plugin/jquery/jquery-1.6.4.min.js"></script>
+	</head>
+
+	<body>
+		<div class="main"> 
+			<!-- 顶部 -->
+			<div class="top"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="logo"><a href="http://www.91lsme.com"><img src="http://www.91lsme.com/app/web/templates/public/image/logo.png"></a></div>
+<div class="Qme"><a href="tencent://message/?uin=286142784&Menu=yes"><img src="http://www.91lsme.com/app/web/templates/public/image/Qme.png"></a></div>
+ </div>
+			<!-- 导航 -->
+			<div class="nav"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul class="navMain">
+	<li><a href="http://www.91lsme.com/"><img src="http://www.91lsme.com/app/web/templates/public/image/nav1.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/1_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav2.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/2_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav3.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/3_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav4.png"/></a></li>
+	<li><a href="http://www.91lsme.com/articlelist/4_1.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav5.png"/></a></li>
+	<li><a href="http://www.91lsme.com/article/14.shtml"><img src="http://www.91lsme.com/app/web/templates/public/image/nav6.png"/></a></li>
+</ul>
+ </div>
+			<div class="content"> 
+				<!-- 左边框 -->
+				<div class="left"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="leftImg"><img src="http://www.91lsme.com/app/web/templates/public/image/leftImg.png"></div>
+<div class="leftWord">
+	<div class="titleL"><img src="http://www.91lsme.com/app/web/templates/public/image/listen.png"></div>
+	<div class="wordL">
+		<div class="tM"><span>⊙</span> 前言阵地 </div>
+		<div class="cM" style="text-indent:2em"> 经过很长时间奋战，就要听我说个人网终于建成，还有很多不成熟和欠缺的地方 ，希望大家多多支持和提出好的建议！以后会做的更好 ……</div>
+	</div>   
+	<script type="text/javascript" src="/plugin/highcharts/highcharts.js"></script>  
+	<script type="text/javascript" src="/plugin/highcharts/highcharts-more.js"></script>
+	<script type="text/javascript" src="/plugin/highcharts/themes/grid.js"></script>
+	<script type="text/javascript" src="/app/web/templates/public/js/clock.js"></script>
+	<div class="lefttime" id="container_clock"></div>
+	<div class="leftad"></div>
+</div>
+ </div>
+				<div class="centerAndRight"> 
+					<!-- 空白框 -->
+					<div class="ad">  </div>
+					<div class="center">
+						<div class="title">
+							<div class="titleImg">
+								<img src="http://www.91lsme.com/app/web/templates/default/image/life.png"/>
+							</div>
+						</div>  
+						<div class="articleTitle">魔方强悍公式</div>
+						<div class="time">2014-12-22</div>
+						<div class="line_1"></div>
+						<div class="articleMain">&nbsp; 六面回字公式 U’D F’B L R’U’D&nbsp;<br />
+&nbsp; 样式说明四色回字公式 B2 L R B L2 B F D U’B F R2 F’L R&nbsp;<br />
+&nbsp; 对称棋盘公式 L2 R2 F2 B2 U2 D2&nbsp;<br />
+&nbsp; 循环棋盘公式 D2 F2 U\'B2 F2 L2 R2 D R’B F D\'U L R D2 U2 F\'U2&nbsp;<br />
+&nbsp; 六面十字公式 B2 F’L2 R2 D2 B2 F2 L2 R2 U2 F\'<br />
+&nbsp; 四面十字公式 D F2 R2 F2 D’U R2 F2 R2 U\'<br />
+&nbsp; 双色十字公式 U’D F’B L R’U’D L2 R2 F2 B2 U2 D2<br />
+&nbsp; 三色十字公式 B F’L2 R2 U D\'<br />
+&nbsp; 四色十字公式 U2 R B D B F’L’U’B F’L F L’R D U2 F’R’U2<br />
+&nbsp; 五彩十字公式 L2 D’F2 D B D L F R’U’R’D’F L2 B F2 L<br />
+&nbsp; 六面皇后公式 R2 B2 U2 L2 B2 U2 F2 L2 D L’R F L2 F’U’D L<br />
+&nbsp; 六面五色公式 U B2 L2 B F’U F’D2 L D2 F D R2 F2 R’B’U’R’<br />
+&nbsp; 六面六色公式 D2 U2 L2 B R2 D’L2 R2 D2 B2 F2 U’R2 B’R2<br />
+&nbsp; 六面彩条公式 F2 U2 F2 B2 U2 F B<br />
+&nbsp; 六面三条公式 (U2 L2)3 (U2 R2)3 U D L2 R2<br />
+&nbsp; 六面凹字公式 F2 L’R B2 U2 L R’D2&nbsp;<br />
+&nbsp; 六面凹字公式 U D L2 F2 U D’B2 R2 D2<br />
+&nbsp; 六面凸字公式 F2 R F2 R\'U2 F2 L U2 B2 U2 F\'U2 R D’B2 D F\'D2 R F<br />
+&nbsp; 六面工字公式 D2 ML’F2 B2 ML’D2<br />
+&nbsp; 六面Q字公式 D F2 U’B F’L R’D L2 U’B R2 B’U L2 U\'<br />
+&nbsp; 六面J字公式 D2 L2 D R2 U B2 U2 B R’B’D B2 R’F R2 F’U R\'<br />
+&nbsp; 六面L字公式 L R U D F’B’L R<br />
+&nbsp; 六面彩E公式 F2 R2 F2 U’R’B2 F L R’U L’R U B U2 F2 D’U\'<br />
+&nbsp; 六面C U公式 D’U B D’L’R F D’B’D’U L<br />
+&nbsp; 六面T字公式 U2 F2 R2 D U’L2 B2 D U或者B2 D2 L R’D2 B2 L R\'<br />
+&nbsp; 四面Z字公式 ( F B R L )3 (U D\')2<br />
+&nbsp; 四面I字公式 R2 F2 R2 L2 F2 L2<br />
+&nbsp; 四面L字公式 B F D U L2 D U’B F\'<br />
+&nbsp; 四面O字公式 U R2 L2 U D’F2 B2 D\'<br />
+&nbsp; 四面E字公式 R2 U2 F2 R2 U2 R2 F2 U2<br />
+&nbsp; 四面V Y公式 D2 R L U2 R2 L2 U2 R L&nbsp;<br />
+&nbsp; 四面C U公式 R2 F2 B2 L2 U F2 R2 L2 B2 D\'<br />
+&nbsp; C C T V公式一 B2 R2 D2 U2 F2 L R’U2 L’R’<br />
+&nbsp; C C T V公式二 L2 B2 R2 D2 R2 F2 U2 F2 R2 U2 R2&nbsp;<br />
+&nbsp; 六面斜线公式 B L2 U2 L2 B’F’U2 R’B F R2 D’L R’D’U R F’<br />
+&nbsp; 三色斜线公式 R F2 L’D2 F2 L’R2 B’L’B’F’D’U R F’D R’B R\'<br />
+&nbsp; 四面斜线公式 F B L R F B L R F B L R<br />
+&nbsp; 大小魔方公式 U2 L2 F2 U’B2 D R F’R F’R F’D’B2 U\'<br />
+&nbsp; 大中小魔公式 BL\'D2LDF\'D2FD\'B\'F\'RU2R\'U\'BU2B\'UF (R\'D2RB\'U2B)2<br />
+&nbsp; 大中小魔公式 F D2 L2 B D B’F2 U’F U F2 U2 F’L D F’U&nbsp;<br />
+&nbsp; 六面双环公式 B R L’D’R2 D R’L B’R2 U B2 U’D B2 R L U2 R’L’B2 D\'<br />
+&nbsp; 六面蛇形公式 B R L’D’R2 D R’L B’R2 U B2 U’D R2 D\'<br />
+&nbsp; 彩带魔方公式 D2 L’U2 FL2 D2 U R2 D L2 B’L2 U L D’R2 U\'<br />
+&nbsp; 六面鱼形公式 L2 D B2 U R2 B2 D L’B2 F\'D\'U R\'D2 R\'B2 F\'U\'F\'&nbsp;<br /></div> 
+						<div class="articlelink">相关链接：<a href="http://hi.baidu.com/tylergong/item/d9c2b717d56008cb39cb3048" target="_blank">http://hi.baidu.com/tylergong/item/d9c2b717d56008cb39cb3048</a></div> 
+						<div class="articlefooter">亲们~！有事就点“<a href="tencent://message/?uin=286142784&Menu=yes">就Q我</a>"，多支持和提出好的建议！以后会做的更好 ……</div>
+						<div class="articleother">
+							<div>上一篇：<a href="http://www.91lsme.com/article/32.shtml">10条好的PHP编程习惯</a></div>
+							<div>下一篇：<a href="http://www.91lsme.com/article/30.shtml">优酷 等视频 广告屏蔽方法 超爽</a></div>
+						</div>
+					</div>
+					<div class="cbottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ </div>
+				</div>
+			</div>
+			<!-- 低部 -->
+			<div class="bottom"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<ul>
+	<li><a href="http://www.91lsme.com">版权信息</a></li>
+	<li><a href="http://www.91lsme.com">建站说明</a></li>
+	<li><a href="http://www.91lsme.com">设为首页</a></li>
+	<li><a href="http://www.91lsme.com">加入收藏</a></li>
+</ul> 
+<br/><br/>
+<div class="bw">Copyright © 2014-2015 tylergong <a href="http://www.91lsme.com" target="_blank">www.91lsme.com</a> All rights reserved. <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备 14059724号</a></div> 
+<div style="display: none;">
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4e12425c4f2ca16acaab6b2a8cdc8fbc' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</div>
+ </div>
+		</div>
+	</body>
+</html>
