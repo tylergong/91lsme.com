@@ -3,15 +3,13 @@ var cname = {'1': '感知', '2': '觉醒', '3': '践行', '4': '生活随笔', '
 // 实例vue
 new Vue({
     el: '#article-list',
-    data () {
-        return {
-            lists: '',                  //列表数据
-            cklists: [],                // 选中列表
-            all: 0,                     //总页数
-            cur: 1,                     //当前页码
-            selectedAllState: false,    //是否全选
-            isshow: false,
-        }
+    data: {
+        lists: '',                  //列表数据
+        cklists: [],                // 选中列表
+        all: 0,                     //总页数
+        cur: 1,                     //当前页码
+        selectedAllState: false,    //是否全选
+        isshow: false,
     },
     // 初始化调用
     created: function () {

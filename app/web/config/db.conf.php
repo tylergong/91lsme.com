@@ -9,7 +9,7 @@ $defaultDbConfig = array(
 	'mysql_prot' => 3306,
 	'mysql_user' => 'root',
 	'mysql_pass' => '111111',
-	'mysql_db' => 'test',
+	'mysql_db' => 'qdm114542290_db',
 	'mysql_prefix' => '',
 	'mysql_master' => 1
 );
@@ -24,7 +24,7 @@ $otherDbconf = array(
 		'mysql_prot' => 3306,
 		'mysql_user' => 'root',
 		'mysql_pass' => '111111',
-		'mysql_db' => 'test',
+		'mysql_db' => 'qdm114542290_db',
 		'mysql_prefix' => '',
 		'mysql_master' => 0
 	)
